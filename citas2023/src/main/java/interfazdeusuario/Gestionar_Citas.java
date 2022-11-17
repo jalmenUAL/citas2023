@@ -41,8 +41,9 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 	}
 
 	void Inicializar() {
-		Dar_de_Alta_Cita();
+		this.getElement().setProperty("width", "100%");
 		Ver_Todas_las_Citas();
+		Dar_de_Alta_Cita();
 		Dar_de_Baja_Cita();
 	}
 

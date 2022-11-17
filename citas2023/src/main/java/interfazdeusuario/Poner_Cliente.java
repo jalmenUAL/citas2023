@@ -14,7 +14,7 @@ import vistas.VistaPonerCliente;
 public class Poner_Cliente extends VistaPonerCliente {
 	
 	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
-	public Nuevo_Cliente _nuevo_Cliente;
+	public Nuevo_Cliente _nuevo_Cliente = new Nuevo_Cliente();
 	
 	Boolean _cliente = false;
 	iAdministrador adm = new Bd_Principal();

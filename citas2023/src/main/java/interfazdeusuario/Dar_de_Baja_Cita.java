@@ -34,7 +34,7 @@ public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 	}
 
 	public void Inicializar() {
-		super.Inicializar();
+		 
 		this.getPosponerCita().setVisible(false);
 		this.getDarPorRealizadaCita().setVisible(false);
 		this.getCambiarFecha().setVisible(false);

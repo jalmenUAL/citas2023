@@ -51,26 +51,28 @@ public class MainView extends VerticalLayout {
      * @param service The message service. Automatically injected Spring managed bean.
      */
 	
-	/* CHANGES */
+	 
 	
     public MainView() {
     	
-    	Generico gen = new Generico();
+    	//Generico gen = new Generico();
     	
-        add(gen);
+        //add(gen);
         
-        LoginForm vl = gen._login.getVaadinLoginForm();
+        //LoginForm vl = gen._login.getVaadinLoginForm();
     	
         
-    	vl.addLoginListener(e -> {
+    	/*vl.addLoginListener(e -> {
     	    
-    	    if (e.getUsername().equals("admin")) {
+    	    if (e.getUsername().equals("admin")) {*/
     	    	
+    	        this.getElement().setProperty("width", "100%");
     	    	Administrador gc = new Administrador();
-    	    	remove(gen);
+    	    	//remove(gen);
     	    	add(gc);
+    	    	gc.getElement().setProperty("width", "100%");
     	    	
-    	    }
+    	 /*   }
     	    else if (e.getUsername().equals("usuario")) {
     	    	
     	    	Usuario gc = new Usuario();
@@ -81,7 +83,7 @@ public class MainView extends VerticalLayout {
     	    } else {
     	    	vl.setError(true);
     	    }
-    	});
+    	});*/
     	 	
     }
 

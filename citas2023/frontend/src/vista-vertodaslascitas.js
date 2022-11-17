@@ -9,10 +9,13 @@ class VistaVertodaslascitas extends PolymerElement {
                 :host {
                     display: block;
                     height: 100%;
+        			width: 100%;
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <label id="label" style="align-self: stretch;">Citas Pendientes</label>
  <vaadin-vertical-layout theme="spacing" id="tablaactivas" style="align-self: stretch;"></vaadin-vertical-layout>
+ <label id="label1" style="align-self: stretch;">Citas Realizadas</label>
  <vaadin-vertical-layout theme="spacing" id="tablarealizadas" style="align-self: stretch;"></vaadin-vertical-layout>
  <vaadin-button theme="primary" id="darPorRealizadaCita" style="flex-grow: 0; align-self: stretch;">
    Dar Por Realizada 

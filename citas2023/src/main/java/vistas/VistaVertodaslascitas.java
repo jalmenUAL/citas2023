@@ -8,6 +8,7 @@ import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.datepicker.DatePicker;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-vertodaslascitas template.
@@ -15,6 +16,7 @@ import com.vaadin.flow.component.datepicker.DatePicker;
  * Designer will add and remove fields with @Id mappings but
  * does not overwrite or otherwise change this file.
  */
+
 @Tag("vista-vertodaslascitas")
 @JsModule("./src/vista-vertodaslascitas.js")
 public class VistaVertodaslascitas extends PolymerTemplate<VistaVertodaslascitas.VistaVertodaslascitasModel> {
@@ -35,6 +37,10 @@ public class VistaVertodaslascitas extends PolymerTemplate<VistaVertodaslascitas
 	private Element tablaactivas;
 	@Id("tablarealizadas")
 	private Element tablarealizadas;
+	@Id("label")
+	private Label label;
+	@Id("label1")
+	private Label label1;
 
 	/**
      * Creates a new VistaVertodaslascitas.

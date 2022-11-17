@@ -10,6 +10,8 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.checkbox.Checkbox;
 
+import com.vaadin.flow.component.button.Button;
+
 /**
  * A Designer generated component for the vista-vercitasitem template.
  *
@@ -30,12 +32,15 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 	private TextField mes;
 	@Id("asunto")
 	private TextField asunto;
-	@Id("Seleccionado")
-	private Checkbox seleccionado;
+	 
 	@Id("dia")
 	private TextField dia;
 	@Id("ano")
 	private TextField ano;
+	@Id("VerInformacion")
+	private Button verInformacion;
+	@Id("seleccionar")
+	private Checkbox seleccionar;
 
 	/**
      * Creates a new VistaVercitasitem.
@@ -91,13 +96,7 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 		this.asunto = asunto;
 	}
 
-	public Checkbox getSeleccionado() {
-		return seleccionado;
-	}
-
-	public void setSeleccionado(Checkbox seleccionado) {
-		this.seleccionado = seleccionado;
-	}
+	 
 
 	public TextField getDia() {
 		return dia;
@@ -113,5 +112,21 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 
 	public void setAno(TextField ano) {
 		this.ano = ano;
+	}
+
+	public Button getVerInformacion() {
+		return verInformacion;
+	}
+
+	public void setVerInformacion(Button verInformacion) {
+		this.verInformacion = verInformacion;
+	}
+
+	public Checkbox getSeleccionar() {
+		return seleccionar;
+	}
+
+	public void setSeleccionar(Checkbox seleccionar) {
+		this.seleccionar = seleccionar;
 	}
 }

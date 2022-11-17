@@ -18,15 +18,20 @@ public class Ver_Todas_las_Citas extends VistaVertodaslascitas {
 		_ver_Citas_Realizadas.cargar_citas_realizadas();
 		Ver_Citas_Activas();
 		Ver_Citas_Realizadas();
+		this.getDarBaja().setVisible(false);
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
+		this.getPosponerCita().setVisible(false);
+		this.getDarPorRealizadaCita().setVisible(false);
 	}
 	
 	public void Ver_Citas_Activas() {
 		
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_ver_Citas_Activas);
+		this.getTablaactivas().as(VerticalLayout.class).add(_ver_Citas_Activas);
 	}
 
 	public void Ver_Citas_Realizadas() {
 		
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_ver_Citas_Realizadas);
+		this.getTablarealizadas().as(VerticalLayout.class).add(_ver_Citas_Realizadas);
 	}
 }
