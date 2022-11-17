@@ -11,13 +11,13 @@ import bds.iAdministrador;
 
  
 
-public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
+public class Dar_de_Baja_Cita_Activa extends Ver_Citas_Activas {
 	
 	/* CODE GENERATION private event _dar_de_Baja;*/
 	iAdministrador adm = new Bd_Principal();
 	public Gestionar_Citas _gestionar_Citas;
 
-	public Dar_de_Baja_Cita() {
+	public Dar_de_Baja_Cita_Activa() {
 		 
 		Inicializar();
 		this.getDarBaja().addClickListener(new ComponentEventListener() {
@@ -34,7 +34,7 @@ public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 	}
 
 	public void Inicializar() {
-		 
+		this.cargar_citas_activas();
 		this.getPosponerCita().setVisible(false);
 		this.getDarPorRealizadaCita().setVisible(false);
 		this.getCambiarFecha().setVisible(false);
@@ -45,9 +45,9 @@ public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 
 	void Dar_de_Baja() {
 		 
-		for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+		for (int i=0;i < this._item.size();i++)
         {
-				Integer id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
+				Integer id = this._item.elementAt(i).cita.getID();
 
 				adm.Baja_Cita_Activa(id);
         }

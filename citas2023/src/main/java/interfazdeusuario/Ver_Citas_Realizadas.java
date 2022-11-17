@@ -9,7 +9,7 @@ import basededatos.Cita_Realizada;
 import vistas.VistaVercitasitem;
 
 public class Ver_Citas_Realizadas extends Ver_Citas {
-	public Ver_Todas_las_Citas _ver_Todas_las_Citas;
+	 
 	public Vector<Ver_Citas_Realizadas_item> _item = new Vector<Ver_Citas_Realizadas_item>();
 	
 	public void cargar_citas_realizadas() {

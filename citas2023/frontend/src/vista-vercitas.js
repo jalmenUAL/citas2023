@@ -16,6 +16,19 @@ class VistaVercitas extends PolymerElement {
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
  <vaadin-vertical-layout theme="spacing" id="tabla" style="align-self: stretch;"></vaadin-vertical-layout>
+ <vaadin-button theme="primary" id="darPorRealizadaCita" style="flex-grow: 0; align-self: stretch;">
+   Dar Por Realizada 
+ </vaadin-button>
+ <vaadin-button theme="primary" id="posponerCita" style="align-self: stretch;">
+   Posponer Cita 
+ </vaadin-button>
+ <vaadin-button theme="primary" id="cambiarFecha" style="align-self: stretch;">
+   Cambiar Fecha 
+ </vaadin-button>
+ <vaadin-date-picker id="nuevaFecha" style="align-self: stretch;"></vaadin-date-picker>
+ <vaadin-button id="darBaja" style="align-self: stretch;">
+   Dar de Baja 
+ </vaadin-button>
 </vaadin-vertical-layout>
 `;
     }

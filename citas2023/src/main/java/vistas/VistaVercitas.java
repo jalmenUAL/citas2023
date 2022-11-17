@@ -1,19 +1,13 @@
 package vistas;
 
-import com.vaadin.flow.templatemodel.TemplateModel;
-
-import basededatos.Cita_Activa;
-import basededatos.Cita_Realizada;
-
 import com.vaadin.flow.component.Tag;
-import com.vaadin.flow.component.dependency.JsModule;
-import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.polymertemplate.Id;
-import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.datepicker.DatePicker;
-import com.vaadin.flow.component.grid.Grid.Column;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.templatemodel.TemplateModel;
 
 /**
  * A Designer generated component for the vista-vercitas template.
@@ -34,6 +28,41 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	@Id("tabla")
 	private Element tabla;
+
+
+
+
+
+	@Id("darPorRealizadaCita")
+	private Button darPorRealizadaCita;
+
+
+
+
+
+	@Id("posponerCita")
+	private Button posponerCita;
+
+
+
+
+
+	@Id("cambiarFecha")
+	private Button cambiarFecha;
+
+
+
+
+
+	@Id("nuevaFecha")
+	private DatePicker nuevaFecha;
+
+
+
+
+
+	@Id("darBaja")
+	private Button darBaja;
 	 
 
 	 
@@ -69,6 +98,46 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	public void setTabla(Element tabla) {
 		this.tabla = tabla;
+	}
+
+	public Button getDarPorRealizadaCita() {
+		return darPorRealizadaCita;
+	}
+
+	public void setDarPorRealizadaCita(Button darPorRealizadaCita) {
+		this.darPorRealizadaCita = darPorRealizadaCita;
+	}
+
+	public Button getPosponerCita() {
+		return posponerCita;
+	}
+
+	public void setPosponerCita(Button posponerCita) {
+		this.posponerCita = posponerCita;
+	}
+
+	public Button getCambiarFecha() {
+		return cambiarFecha;
+	}
+
+	public void setCambiarFecha(Button cambiarFecha) {
+		this.cambiarFecha = cambiarFecha;
+	}
+
+	public DatePicker getNuevaFecha() {
+		return nuevaFecha;
+	}
+
+	public void setNuevaFecha(DatePicker nuevaFecha) {
+		this.nuevaFecha = nuevaFecha;
+	}
+
+	public Button getDarBaja() {
+		return darBaja;
+	}
+
+	public void setDarBaja(Button darBaja) {
+		this.darBaja = darBaja;
 	}
 
 	 

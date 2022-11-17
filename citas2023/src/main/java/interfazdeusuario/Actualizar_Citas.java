@@ -10,7 +10,7 @@ import basededatos.Cita_Activa;
 import bds.Bd_Principal;
 import bds.iUsuario;
 
-public class Actualizar_Citas extends Ver_Todas_las_Citas {
+public class Actualizar_Citas extends Ver_Citas_Activas {
 	 
 	/*CODE GENERATION
 	private event _dar_por_realizada_Cita;
@@ -58,7 +58,7 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 
 	/*NEW*/
 	public void Inicializar() {
-		super.Inicializar();
+		 
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
 		this.getDarBaja().setVisible(false);
@@ -68,10 +68,10 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 
 	void  Dar_por_realizada_Cita() {
 
-		        for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+		        for (int i=0;i < this._item.size();i++)
 		        {
 		        Integer id;
-				id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
+				id = this._item.elementAt(i).cita.getID();
 				usu.Cita_Realizada(id);
 		        }
 				Inicializar();
@@ -87,10 +87,10 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 	void cambiarFecha() {
 
 		
-		for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+		for (int i=0;i < this._item.size();i++)
         {
 		Integer id;
-		id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
+		id = this._item.elementAt(i).cita.getID();
 		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
         }
 			

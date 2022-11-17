@@ -10,8 +10,8 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 	 
 	public Administrador _administrador;
 	public Dar_de_Alta_Cita _dar_de_Alta_Cita = new Dar_de_Alta_Cita();
-	public Ver_Todas_las_Citas _ver_Todas_las_Citas = new Ver_Todas_las_Citas();
-	public Dar_de_Baja_Cita _dar_de_Baja_Cita = new Dar_de_Baja_Cita();
+	 
+	public Dar_de_Baja_Cita_Realizada _dar_de_Baja_Cita_Realizada = new Dar_de_Baja_Cita_Realizada();
 	
 
 	public Gestionar_Citas() {
@@ -28,13 +28,13 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 			}
 		});
 		 
-		_dar_de_Baja_Cita.getDarBaja().addClickListener(new ComponentEventListener() {
+		_dar_de_Baja_Cita_Realizada.getDarBaja().addClickListener(new ComponentEventListener() {
 			 
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				_dar_de_Baja_Cita.Dar_de_Baja();
+				_dar_de_Baja_Cita_Realizada.Dar_de_Baja();
 			}
 		});
 		
@@ -42,20 +42,18 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 
 	void Inicializar() {
 		this.getElement().setProperty("width", "100%");
-		Ver_Todas_las_Citas();
+		 
 		Dar_de_Alta_Cita();
-		Dar_de_Baja_Cita();
+		Dar_de_Baja_Cita_Realizada();
 	}
 
 	public void Dar_de_Alta_Cita() {
 		this.getVaadinHorizontalLayout().add(_dar_de_Alta_Cita);
 	}
 
-	public void Ver_Todas_las_Citas() {
-		this.getVaadinHorizontalLayout().add(_ver_Todas_las_Citas);
-	}
+	 
 
-	public void Dar_de_Baja_Cita() {
-		this.getVaadinHorizontalLayout().add(_dar_de_Baja_Cita);
+	public void Dar_de_Baja_Cita_Realizada() {
+		this.getVaadinHorizontalLayout().add(_dar_de_Baja_Cita_Realizada);
 	}
 }
