@@ -7,9 +7,11 @@ import vistas.VistaNologeado;
 
 public class No_Logeado extends VistaNologeado {
 	public iNo_Logeado _iNo_Logeado;
-	public Login _login;
+	public Login _login = new Login();
 
-	 
+	public No_Logeado() {
+		Login();
+	}
 	
 	public void Login() {
 		

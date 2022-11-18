@@ -1,6 +1,9 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-login/src/vaadin-login-form.js';
+import '@vaadin/vaadin-form-layout/src/vaadin-form-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-text-field/src/vaadin-password-field.js';
+import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 
 class VistaLogin extends PolymerElement {
 
@@ -14,7 +17,13 @@ class VistaLogin extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-login-form id="vaadinLoginForm"></vaadin-login-form>
+ <vaadin-form-layout id="login" style="align-self: center;">
+  <vaadin-text-field error-message="Please enter a value" required invalid="" label="Required" id="usuario"></vaadin-text-field>
+  <vaadin-password-field id="password"></vaadin-password-field>
+  <vaadin-button id="botonlogin">
+   Login
+  </vaadin-button>
+ </vaadin-form-layout>
 </vaadin-vertical-layout>
 `;
     }

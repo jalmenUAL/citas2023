@@ -7,6 +7,10 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-login template.
@@ -20,8 +24,14 @@ public class VistaLogin extends PolymerTemplate<VistaLogin.VistaLoginModel> {
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("vaadinLoginForm")
-	private LoginForm vaadinLoginForm;
+	@Id("login")
+	private FormLayout login;
+	@Id("usuario")
+	private TextField usuario;
+	@Id("password")
+	private PasswordField password;
+	@Id("botonlogin")
+	private Button botonlogin;
 
 	/**
      * Creates a new VistaLogin.
@@ -37,13 +47,7 @@ public class VistaLogin extends PolymerTemplate<VistaLogin.VistaLoginModel> {
         // Add setters and getters for template properties here.
     }
 
-	public LoginForm getVaadinLoginForm() {
-		return vaadinLoginForm;
-	}
-
-	public void setVaadinLoginForm(LoginForm vaadinLoginForm) {
-		this.vaadinLoginForm = vaadinLoginForm;
-	}
+	
 
 	public Element getVaadinVerticalLayout() {
 		return vaadinVerticalLayout;
@@ -51,5 +55,37 @@ public class VistaLogin extends PolymerTemplate<VistaLogin.VistaLoginModel> {
 
 	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public FormLayout getLogin() {
+		return login;
+	}
+
+	public void setLogin(FormLayout login) {
+		this.login = login;
+	}
+
+	public TextField getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(TextField usuario) {
+		this.usuario = usuario;
+	}
+
+	public PasswordField getPassword() {
+		return password;
+	}
+
+	public void setPassword(PasswordField password) {
+		this.password = password;
+	}
+
+	public Button getBotonlogin() {
+		return botonlogin;
+	}
+
+	public void setBotonlogin(Button botonlogin) {
+		this.botonlogin = botonlogin;
 	}
 }

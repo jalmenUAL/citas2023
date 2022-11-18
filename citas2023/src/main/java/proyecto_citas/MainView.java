@@ -1,5 +1,7 @@
 package proyecto_citas;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -11,14 +13,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
-import interfazdeusuario.Actualizar_Citas;
-import interfazdeusuario.Administrador;
-import interfazdeusuario.Generico;
-import interfazdeusuario.Login;
-import interfazdeusuario.Usuario;
-import vistas.VistaGestionarCitas;
-import vistas.VistaLogin;
-import vistas.VistaVercitas;
+ 
+import interfaz.Administrador;
+import interfaz.No_Logeado;
+import interfaz.Usuario;
+ 
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -55,22 +54,38 @@ public class MainView extends VerticalLayout {
 	
     public MainView() {
     	
-    	//Generico gen = new Generico();
+    	No_Logeado nl = new No_Logeado();
     	
-        //add(gen);
+        add(nl);
         
-        //LoginForm vl = gen._login.getVaadinLoginForm();
+        nl._login.getBotonlogin().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				
+				if (nl._login.getUsuario().getValue().equals("admin"))
+				{
+					Administrador gc = new Administrador();	
+				}
+				else {
+					Usuario gc = new Usuario();
+				}
+				
+			}
+        	
+        });
     	
         
     	/*vl.addLoginListener(e -> {
     	    
     	    if (e.getUsername().equals("admin")) {*/
     	    	
-    	        this.getElement().setProperty("width", "100%");
+    	       /* this.getElement().setProperty("width", "100%");
     	    	Administrador gc = new Administrador();
     	    	//remove(gen);
     	    	add(gc);
-    	    	gc.getElement().setProperty("width", "100%");
+    	    	gc.getElement().setProperty("width", "100%"); */
     	    	
     	 /*   }
     	    else if (e.getUsername().equals("usuario")) {
