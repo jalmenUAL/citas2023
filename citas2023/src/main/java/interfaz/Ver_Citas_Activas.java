@@ -3,9 +3,14 @@ package interfaz;
 import java.util.List;
 import java.util.Vector;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Cita_Activa;
+import bds.Bd_Principal;
+import bds.iAdministrador;
+import bds.iUsuario;
 import interfazdeusuario.Ver_Citas_Activas_item;
 
 public class Ver_Citas_Activas extends Ver_Citas {
@@ -15,13 +20,58 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	public Vector<Ver_Citas_Activas_item> _item = new Vector<Ver_Citas_Activas_item>();
 	
 	Ver_Citas_Activas_item vci;
+	iAdministrador adm = new Bd_Principal();
+	iUsuario usu = new Bd_Principal(); /* RARO*/
+	
+	public Ver_Citas_Activas() {
+		
+		cargar_citas_activas();
+		this.getDarPorRealizadaCita().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				Dar_por_realizada_Cita();
+				
+			}
+		});
+		this.getPosponerCita().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				Posponer_Cita();
+				
+			}
+		});
+
+		this.getCambiarFecha().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				cambiarFecha();
+				
+			}
+		});
+		
+	}
+	
+	
 
 	public void Posponer_Cita() {
-		throw new UnsupportedOperationException();
+		this.getCambiarFecha().setVisible(true);
+		this.getNuevaFecha().setVisible(true);
 	}
 
 	public void Dar_por_realizada_Cita() {
-		throw new UnsupportedOperationException();
+		for (int i=0;i < this._item.size();i++)
+        {
+        Integer id;
+		id = this._item.elementAt(i).cita.getID();
+		usu.Cita_Realizada(id);
+        }
+		cargar_citas_activas();
 	}
 	
 	public void cargar_citas_activas() {
@@ -38,5 +88,20 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			this.getTabla().as(VerticalLayout.class).add(vci);
 			_item.add(vci);
 		}
+	}
+void cambiarFecha() {
+
+		
+		for (int i=0;i < this._item.size();i++)
+        {
+		Integer id;
+		id = this._item.elementAt(i).cita.getID();
+		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
+        }
+			
+		     cargar_citas_activas();
+			this.getCambiarFecha().setVisible(false);
+			this.getNuevaFecha().setVisible(false);
+		 
 	}
 }

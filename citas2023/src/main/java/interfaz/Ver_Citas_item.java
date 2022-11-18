@@ -2,6 +2,8 @@ package interfaz;
 
 import basededatos.Cita;
 import basededatos.Cliente;
+import bds.Bd_Principal;
+import bds.iAdministrador;
 import vistas.VistaVercitasitem;
 
 public class Ver_Citas_item extends VistaVercitasitem {
@@ -9,13 +11,15 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	public Ver_Citas _ver_Citas;
 	public Ver_Informacion_Cliente _ver_Informacion_Cliente;
 
+	iAdministrador adm = new Bd_Principal();
+	Cita cita;
 	 
 
 	public void Seleccionar() {
 		throw new UnsupportedOperationException();
 	}
 	
-Cita cita;
+ 
 	
 	public Ver_Citas_item(Cita c){
 		cita = c;

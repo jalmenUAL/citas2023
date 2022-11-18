@@ -13,7 +13,7 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	
 	
 	iAdministrador adm = new Bd_Principal();
-	Cita cita;
+	public Cita cita;
 	
 	public Ver_Citas_item(Cita c){
 		cita = c;

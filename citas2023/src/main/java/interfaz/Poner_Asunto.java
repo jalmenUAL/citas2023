@@ -8,18 +8,21 @@ import vistas.VistaPonerAsunto;
 public class Poner_Asunto extends VistaPonerAsunto {
 	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
 	public Nuevo_Asunto _nuevo_Asunto;
+	
+	Boolean _asunto = false;
 
 	public void Nuevo_Asunto() {
-		throw new UnsupportedOperationException();
+		_nuevo_Asunto.setVisible(false);
+		_asunto = true;
 	}
 	
 	public Poner_Asunto() {
-		Inicializar();
+		 
 		this.getBotonNuevoAsunto().addClickListener(new ComponentEventListener() {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				nuevoAsunto();
+				Nuevo_Asunto();
 			}
 		});
 	}

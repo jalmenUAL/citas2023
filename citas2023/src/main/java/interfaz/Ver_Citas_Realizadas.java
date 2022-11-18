@@ -6,11 +6,15 @@ import java.util.Vector;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Cita_Realizada;
+import bds.Bd_Principal;
+import bds.iAdministrador;
 import interfazdeusuario.Ver_Citas_Realizadas_item;
 
 public class Ver_Citas_Realizadas extends Ver_Citas {
 	public Gestionar_Citas _gestionar_Citas;
 	public Vector<Ver_Citas_Realizadas_item> _item = new Vector<Ver_Citas_Realizadas_item>();
+	
+	iAdministrador adm = new Bd_Principal();
 	
 	public void cargar_citas_realizadas() {
 		 List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();

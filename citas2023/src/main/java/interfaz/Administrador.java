@@ -14,6 +14,7 @@ public class Administrador extends Logeado {
 	 }
 	 
 	 public void Gestionar_Citas() {
-		 this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_gestionar_Citas);
+		 this.getConenido().as(VerticalLayout.class).removeAll();
+		 this.getConenido().as(VerticalLayout.class).add(_gestionar_Citas);
 		}
 }

@@ -17,17 +17,19 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	public Poner_Fecha _poner_Fecha;
 	public Poner_Asunto _poner_Asunto;
 	public Poner_Cliente _poner_Cliente;
-	public Servidor_de_Correo _servidor_de_Correo;
+	public Servidor_de_Correo _servidor_de_Correo = new Servidor_de_Correo();
 
 	iAdministrador adm = new Bd_Principal();
 
 	public void Enviar_Correo() {
-		throw new UnsupportedOperationException();
+		_servidor_de_Correo.Enviar_Correo();
 	}
 	
-public Dar_de_Alta_Cita() {
+	public Dar_de_Alta_Cita() {
 		
-		Inicializar();
+		Poner_Fecha();
+		Poner_Asunto();
+		Poner_Cliente();
 
 		this.getDarDeAta().addClickListener(new ComponentEventListener() {
 			 
@@ -46,28 +48,17 @@ public Dar_de_Alta_Cita() {
 		 
 		 
 	}
-
-	
-
-	void Inicializar() {
-		Poner_Fecha();
-		Poner_Asunto();
-		Poner_Cliente();
-	}
 	
 	public void Poner_Fecha() {
-		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
-		 vl.addComponentAsFirst(_poner_Fecha);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Fecha);
 	}
 
 	public void Poner_Asunto() {
-		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
-		 vl.addComponentAsFirst(_poner_Asunto);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Asunto);
 	}
 
 	public void Poner_Cliente() {
-		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);	  
-		 vl.addComponentAsFirst(_poner_Cliente);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Cliente);
 	}
 
 	void Dar_de_Alta() {

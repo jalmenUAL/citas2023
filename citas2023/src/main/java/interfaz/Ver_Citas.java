@@ -2,7 +2,9 @@ package interfaz;
 
 import java.util.Vector;
 
-public class Ver_Citas {
+import vistas.VistaVercitas;
+
+public class Ver_Citas extends VistaVercitas {
 	/*private event _dar_de_Baja;*/
 	public Vector<Ver_Citas_item> _item = new Vector<Ver_Citas_item>();
 
