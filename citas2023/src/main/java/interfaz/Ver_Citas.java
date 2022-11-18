@@ -11,7 +11,7 @@ public class Ver_Citas extends VistaVercitas {
 	/*private event _dar_de_Baja;*/
 	public Vector<Ver_Citas_item> _item = new Vector<Ver_Citas_item>();
 	
-	/*OJO CLASE GENERICA, adm  */
+	 
 	
 	iAdministrador adm = new Bd_Principal();
 
@@ -20,9 +20,11 @@ public class Ver_Citas extends VistaVercitas {
 		for (int i=0;i < this._item.size();i++)
         {
 				Integer id = this._item.elementAt(i).cita.getID();
-
-				adm.Baja_Cita_Activa(id);
+				if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
+							{ adm.Baja_Cita(id);}
         }
+		
+		
 
 		 
 	}

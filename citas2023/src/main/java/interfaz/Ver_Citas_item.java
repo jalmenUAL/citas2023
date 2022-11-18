@@ -1,5 +1,11 @@
 package interfaz;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import basededatos.Cita;
 import basededatos.Cliente;
 import bds.Bd_Principal;
@@ -23,6 +29,25 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	
 	public Ver_Citas_item(Cita c){
 		cita = c;
+		
+		this.getVerInformacion().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+
+				Ver_Informacion_Cliente();
+				mostrar_informacion();
+				
+			}});
+	}
+	
+	public void mostrar_informacion() {
+		Dialog dialog = new Dialog();
+		dialog.add(_ver_Informacion_Cliente);
+		dialog.open();
+		Button cancelButton = new Button("Ok", e -> dialog.close());
+		dialog.add(cancelButton);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(dialog);
 	}
 	
 	public void Ver_Informacion_Cliente() {

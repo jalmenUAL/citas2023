@@ -119,6 +119,32 @@ public class Bd_Citas implements Serializable {
 		}
 
 	}
+	
+	public void Baja_Cita(int ID) throws PersistentException {
+		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			Cita c = CitaDAO.loadCitaByORMID(ID);
+			Fecha f = FechaDAO.loadFechaByORMID(c.getFecha().getID());
+			FechaDAO.delete(f);
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+		}
+
+		PersistentTransaction t2 = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			Cita ca = CitaDAO.loadCitaByORMID(ID);
+			Cita c = CitaDAO.loadCitaByORMID(ID);
+			CitaDAO.delete(ca);
+			t2.commit();
+		} catch (Exception e) {
+			t2.rollback();
+		}
+		GestiondeCitasPersistentManager.instance().disposePersistentManager();
+
+	}
 
 	public void Baja_Cita_Activa(int ID) throws PersistentException {
 		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();

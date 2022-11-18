@@ -14,7 +14,15 @@ public class Ver_Citas_Realizadas extends Ver_Citas {
 	public Gestionar_Citas _gestionar_Citas;
 	public Vector<Ver_Citas_Realizadas_item> _item = new Vector<Ver_Citas_Realizadas_item>();
 	
-	iAdministrador adm = _gestionar_Citas._administrador._iAdministrador;
+	iAdministrador adm = new Bd_Principal();
+	
+	public Ver_Citas_Realizadas() {
+		this.getDarPorRealizadaCita().setVisible(false);
+		this.getPosponerCita().setVisible(false);
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
+		cargar_citas_realizadas();
+	}
 	
 	public void cargar_citas_realizadas() {
 		 List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();

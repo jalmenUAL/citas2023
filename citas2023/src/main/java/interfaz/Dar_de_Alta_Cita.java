@@ -19,7 +19,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	public Poner_Cliente _poner_Cliente = new Poner_Cliente();
 	public Servidor_de_Correo _servidor_de_Correo = new Servidor_de_Correo();
 
-	iAdministrador adm = _gestionar_Citas._administrador._iAdministrador;
+	iAdministrador adm = new Bd_Principal();
 
 	public void Enviar_Correo() {
 		_servidor_de_Correo.Enviar_Correo();

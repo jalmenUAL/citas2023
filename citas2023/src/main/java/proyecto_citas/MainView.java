@@ -67,9 +67,17 @@ public class MainView extends VerticalLayout {
 				if (nl._login.getUsuario().getValue().equals("admin"))
 				{
 					Administrador gc = new Administrador();	
+					removeAll();
+					
+					gc.getElement().setProperty("width", "100%");
+					add(gc);
 				}
 				else {
 					Usuario gc = new Usuario();
+					removeAll();
+					
+					gc.getElement().setProperty("width", "100%");
+					add(gc);
 				}
 				
 			}

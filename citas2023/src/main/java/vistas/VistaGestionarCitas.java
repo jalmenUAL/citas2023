@@ -6,6 +6,8 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-gestionar-citas template.
@@ -19,8 +21,17 @@ public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.Vis
 
      
 	 
-	@Id("vaadinHorizontalLayout")
-	private HorizontalLayout vaadinHorizontalLayout;
+	 
+	private Element vaadinVerticalLayout;
+	@Id("botonVerCitasRealizadas")
+	private Button botonVerCitasRealizadas;
+	@Id("botondardeAltaCita")
+	private Button botondardeAltaCita;
+	 
+	@Id("Menu")
+	private Element menu;
+	@Id("Ventana")
+	private Element ventana;
 
 	/**
      * Creates a new VistaGestionarCitas.
@@ -36,13 +47,47 @@ public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.Vis
         // Add setters and getters for template properties here.
     }
 
-	public HorizontalLayout getVaadinHorizontalLayout() {
-		return vaadinHorizontalLayout;
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
 	}
 
-	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
-		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
+
+	public Button getBotonVerCitasRealizadas() {
+		return botonVerCitasRealizadas;
+	}
+
+	public void setBotonVerCitasRealizadas(Button botonVerCitasRealizadas) {
+		this.botonVerCitasRealizadas = botonVerCitasRealizadas;
+	}
+
+	public Button getBotondardeAltaCita() {
+		return botondardeAltaCita;
+	}
+
+	public void setBotondardeAltaCita(Button botondardeAltaCita) {
+		this.botondardeAltaCita = botondardeAltaCita;
+	}
+
+	public Element getMenu() {
+		return menu;
+	}
+
+	public void setMenu(Element menu) {
+		this.menu = menu;
+	}
+
+	public Element getVentana() {
+		return ventana;
+	}
+
+	public void setVentana(Element ventana) {
+		this.ventana = ventana;
+	}
+
+	 
 
 	 
 }

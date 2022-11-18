@@ -26,6 +26,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	public Ver_Citas_Activas() {
 		
 		cargar_citas_activas();
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
 		this.getDarPorRealizadaCita().addClickListener(new ComponentEventListener() {
 
 			@Override
@@ -67,9 +69,10 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	public void Dar_por_realizada_Cita() {
 		for (int i=0;i < this._item.size();i++)
         {
-        Integer id;
+			if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
+				{Integer id;
 		id = this._item.elementAt(i).cita.getID();
-		usu.Cita_Realizada(id);
+		usu.Cita_Realizada(id);}
         }
 		cargar_citas_activas();
 	}
@@ -94,14 +97,15 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		
 		for (int i=0;i < this._item.size();i++)
         {
+		if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue()) {
 		Integer id;
 		id = this._item.elementAt(i).cita.getID();
-		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
+		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());}
         }
 			
-		     cargar_citas_activas();
-			this.getCambiarFecha().setVisible(false);
-			this.getNuevaFecha().setVisible(false);
+		 cargar_citas_activas();
+	     this.getCambiarFecha().setVisible(false);
+		 this.getNuevaFecha().setVisible(false);
 		 
 	}
 }

@@ -10,6 +10,8 @@ import basededatos.Fecha;
 public interface iAdministrador {
 
 	void Crear_Cita(LocalDate fecha, int Cliente, int Asunto);
+	
+	void Baja_Cita(int ID);
 
 	void Baja_Cita_Activa(int ID);
 

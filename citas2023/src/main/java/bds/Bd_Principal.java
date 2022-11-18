@@ -39,6 +39,17 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 			e.printStackTrace();
 		}
 	}
+	
+	public void Baja_Cita(int ID) {
+		try {
+			citas.Baja_Cita(ID);
+
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public void Baja_Cita_Activa(int ID) {
 		try {
