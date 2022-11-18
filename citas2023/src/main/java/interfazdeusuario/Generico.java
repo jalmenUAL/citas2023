@@ -2,12 +2,12 @@ package interfazdeusuario;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-import bds.iGenerico;
+import bds.iNo_Logeado;
 import vistas.VistaGenerico;
 
 public class Generico  extends VistaGenerico {
 
-	public iGenerico _iGenerico;
+	public iNo_Logeado _iGenerico;
 	public Login _login = new Login();
 	
 	
