@@ -20,8 +20,6 @@ public class Poner_Cliente extends VistaPonerCliente {
 	List<Cliente> cl = adm.Cargar_Clientes();
 
 	public Poner_Cliente() { 
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Cliente);
-		_nuevo_Cliente.setVisible(false);
 		this.getSeleccionCliente().setItems(cl);
 		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 		this.getBotonNuevoCliente().addClickListener(new ComponentEventListener() {
@@ -33,7 +31,7 @@ public class Poner_Cliente extends VistaPonerCliente {
 		});
 	}
 	public void Nuevo_Cliente() {
-		_nuevo_Cliente.setVisible(true);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Cliente);
 		_cliente = true;
 	}
 

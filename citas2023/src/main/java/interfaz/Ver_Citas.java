@@ -2,6 +2,10 @@ package interfaz;
 
 import java.util.Vector;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.notification.Notification;
+
 import bds.Bd_Principal;
 import bds.iAdministrador;
 import bds.iUsuario;
@@ -21,6 +25,7 @@ public class Ver_Citas extends VistaVercitas {
 							{ 
 							adm.Baja_Cita(id);
 							}
-        }	 
+        }
+		Notification.show("Cita dada de baja satisfactoriamente");
 	}
 }

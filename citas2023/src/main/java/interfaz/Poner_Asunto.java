@@ -1,8 +1,15 @@
 package interfaz;
 
+import java.util.List;
+
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.Asunto;
+import basededatos.Cliente;
+import bds.Bd_Principal;
+import bds.iAdministrador;
 import vistas.VistaPonerAsunto;
 
 public class Poner_Asunto extends VistaPonerAsunto {
@@ -10,10 +17,15 @@ public class Poner_Asunto extends VistaPonerAsunto {
 	public Nuevo_Asunto _nuevo_Asunto = new Nuevo_Asunto();
 	
 	Boolean _asunto = false;
-
+	iAdministrador adm = new Bd_Principal();
+	List<Asunto> as = adm.Cargar_Asuntos();
 	
 	public Poner_Asunto() {	 
-		_nuevo_Asunto.setVisible(false);
+		
+		
+		 
+		this.getSeleccionAsunto().setItems(as);
+		this.getSeleccionAsunto().setItemLabelGenerator(Asunto::getNombre);
 		this.getBotonNuevoAsunto().addClickListener(new ComponentEventListener() {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
@@ -23,7 +35,7 @@ public class Poner_Asunto extends VistaPonerAsunto {
 		});		
 	}
 	public void Nuevo_Asunto() {
-		_nuevo_Asunto.setVisible(true);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Asunto);
 		_asunto = true;
 	}
 }

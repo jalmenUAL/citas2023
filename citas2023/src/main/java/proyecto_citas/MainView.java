@@ -71,6 +71,15 @@ public class MainView extends VerticalLayout {
 					
 					gc.getElement().setProperty("width", "100%");
 					add(gc);
+					
+					gc.getLogout().addClickListener(new ComponentEventListener() {
+
+						@Override
+						public void onComponentEvent(ComponentEvent event) {
+							// TODO Auto-generated method stub
+							removeAll();
+							add(nl); 
+						}});
 				}
 				else {
 					Usuario gc = new Usuario();
@@ -78,6 +87,15 @@ public class MainView extends VerticalLayout {
 					
 					gc.getElement().setProperty("width", "100%");
 					add(gc);
+					
+					gc.getLogout().addClickListener(new ComponentEventListener() {
+
+						@Override
+						public void onComponentEvent(ComponentEvent event) {
+							// TODO Auto-generated method stub
+							removeAll();
+							add(nl); 
+						}});
 				}
 				
 			}
@@ -85,28 +103,7 @@ public class MainView extends VerticalLayout {
         });
     	
         
-    	/*vl.addLoginListener(e -> {
-    	    
-    	    if (e.getUsername().equals("admin")) {*/
-    	    	
-    	       /* this.getElement().setProperty("width", "100%");
-    	    	Administrador gc = new Administrador();
-    	    	//remove(gen);
-    	    	add(gc);
-    	    	gc.getElement().setProperty("width", "100%"); */
-    	    	
-    	 /*   }
-    	    else if (e.getUsername().equals("usuario")) {
-    	    	
-    	    	Usuario gc = new Usuario();
-    	    	remove(gen);
-    	    	add(gc);
-    	    	 
-    	        
-    	    } else {
-    	    	vl.setError(true);
-    	    }
-    	});*/
+        
     	 	
     }
 

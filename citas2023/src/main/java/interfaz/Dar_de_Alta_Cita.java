@@ -30,13 +30,17 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 		Poner_Fecha();
 		Poner_Asunto();
 		Poner_Cliente();
+		_poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
+		_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
 
 		this.getDarDeAta().addClickListener(new ComponentEventListener() {
 			@Override
-			public void onComponentEvent(ComponentEvent event) {
-				_poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
-				_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
+			public void onComponentEvent(ComponentEvent event) {			
 				 Dar_de_Alta();
+				 Notification.show("Cita Añadida Exitósamente");
+				 _poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
+					_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
+				
 			}
 		});	 
 	}
@@ -59,9 +63,11 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				adm.Crear_Cita_Asunto_Cliente_Nuevos(_poner_Fecha.getFechaCita().getValue(), _poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
 						_poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(), _poner_Cliente._nuevo_Cliente.getDireccion().getValue(),
 						_poner_Cliente._nuevo_Cliente.getTelefono().getValue());
-				_poner_Asunto._nuevo_Asunto.getNuevoAsunto().setVisible(false);
+				 
 				_poner_Asunto._asunto = false;
 				_poner_Cliente._cliente = false;
+				_poner_Asunto.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Asunto._nuevo_Asunto);
+				 _poner_Cliente.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Cliente._nuevo_Cliente);
 
 			} else {	
 				if (_poner_Asunto.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
@@ -72,6 +78,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				adm.Crear_Cita_Nuevo_Cliente(_poner_Fecha.getFechaCita().getValue(), _poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(),
 						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID());		
 				_poner_Cliente._cliente = false;
+				 _poner_Cliente.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Cliente._nuevo_Cliente);
 				}
 				}
 			}
@@ -86,6 +93,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				adm.Crear_Cita_Nuevo_Asunto(_poner_Fecha.getFechaCita().getValue(),_poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
 						cliente.getORMID());
 				_poner_Asunto._asunto = false;
+				_poner_Asunto.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Asunto._nuevo_Asunto);
 				}
 					}
 			} 

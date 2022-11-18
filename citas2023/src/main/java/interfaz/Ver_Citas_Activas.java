@@ -5,19 +5,20 @@ import java.util.Vector;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Cita_Activa;
 import bds.Bd_Principal;
 import bds.iAdministrador;
 import bds.iUsuario;
-import interfazdeusuario.Ver_Citas_Activas_item;
+import interfaz.Ver_Citas_Activas_item;
 
 public class Ver_Citas_Activas extends Ver_Citas {
 	/*private event _posponer_Cita;
 	private event _dar_por_realizada_Cita;*/
 	public Usuario _usuario;
-	public Vector<Ver_Citas_Activas_item> _item = new Vector<Ver_Citas_Activas_item>();
+	//public   Vector<Ver_Citas_Activas_item> _item = new Vector<Ver_Citas_Activas_item>();
 	
 	Ver_Citas_Activas_item vci;
 	iAdministrador adm = new Bd_Principal();
@@ -53,6 +54,15 @@ public class Ver_Citas_Activas extends Ver_Citas {
 				cambiarFecha();			
 			}
 		});
+		this.getDarBaja().addClickListener(new ComponentEventListener() {
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				Dar_de_Baja();
+				cargar_citas_activas();
+			}
+		});
 		
 	}
 	
@@ -85,7 +95,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			vci.getCliente().setValue(ca.get(i).getCliente().getNombre());
 			vci.getAsunto().setValue(ca.get(i).getEs_para().getNombre());
 			vci.getDia().setValue(Integer.toString(ca.get(i).getFecha().getDia()));
-			vci.getCliente().setValue(ca.get(i).getCliente().getNombre());
+			vci.getMes().setValue(Integer.toString(ca.get(i).getFecha().getMes()));
+			vci.getAno().setValue(Integer.toString(ca.get(i).getFecha().getAnyo()));
 			this.getTabla().as(VerticalLayout.class).add(vci);
 			_item.add(vci);
 		}
@@ -106,4 +117,15 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		 this.getNuevaFecha().setVisible(false);
 		 
 	}
+	/*void Dar_de_Baja() {
+		for (int i=0;i < this._item.size();i++)
+        {
+				Integer id = this._item.elementAt(i).cita.getID();
+				if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
+							{ 
+							adm.Baja_Cita(id);
+							}
+        }
+		Notification.show("Cita dada de baja satisfactoriamente");
+	}*/
 }
