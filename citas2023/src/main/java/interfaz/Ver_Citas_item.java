@@ -18,35 +18,23 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	public Ver_Informacion_Cliente _ver_Informacion_Cliente = new Ver_Informacion_Cliente();
 
 	iAdministrador adm = new Bd_Principal();
-	Cita cita;
-	 
-
-	public void Seleccionar() {
-		 
-	}
-	
- 
-	
+	Cita cita;	
 	public Ver_Citas_item(Cita c){
-		cita = c;
-		
+		cita = c;		
 		this.getVerInformacion().addClickListener(new ComponentEventListener() {
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
-
 				Ver_Informacion_Cliente();
-				mostrar_informacion();
-				
+				mostrar_informacion();			
 			}});
 	}
 	
 	public void mostrar_informacion() {
 		Dialog dialog = new Dialog();
 		dialog.add(_ver_Informacion_Cliente);
+		Button OkButton = new Button("Ok", e -> dialog.close());
+		dialog.add(OkButton);
 		dialog.open();
-		Button cancelButton = new Button("Ok", e -> dialog.close());
-		dialog.add(cancelButton);
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(dialog);
 	}
 	
@@ -56,5 +44,8 @@ public class Ver_Citas_item extends VistaVercitasitem {
 		_ver_Informacion_Cliente.getNombre().setValue(cli.getNombre());
 		_ver_Informacion_Cliente.getDireccion().setValue(cli.getDireccion());
 		_ver_Informacion_Cliente.getTelefono().setValue(cli.getTelefono());
+	}
+	
+	public void Seleccionar() {	 
 	}
 }

@@ -3,7 +3,6 @@ import '@vaadin/vaadin-form-layout/vaadin-form-layout.js';
 import '@vaadin/vaadin-form-layout/src/vaadin-form-layout.js';
 import '@vaadin/vaadin-form-layout/vaadin-form-item.js';
 import '@vaadin/vaadin-text-field/vaadin-text-field.js';
-import '@vaadin/vaadin-button/vaadin-button.js';
 
 class VistaVerInformacionCliente extends PolymerElement {
 
@@ -30,9 +29,6 @@ class VistaVerInformacionCliente extends PolymerElement {
    <label slot="label" id="label2">Teléfono </label>
    <vaadin-text-field class="full-width" required id="telefono" has-value></vaadin-text-field>
   </vaadin-form-item>
-  <vaadin-button theme="primary" id="vaadinButton" style="width: 100%;">
-    OK 
-  </vaadin-button>
  </vaadin-form-layout>
 </vaadin-form-layout>
 `;

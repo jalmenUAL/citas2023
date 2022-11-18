@@ -32,21 +32,13 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 		Poner_Cliente();
 
 		this.getDarDeAta().addClickListener(new ComponentEventListener() {
-			 
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
-				Dar_de_Alta();
 				_poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
 				_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
-				
+				 Dar_de_Alta();
 			}
-
-		});
-		
-		
-		 
-		 
+		});	 
 	}
 	
 	public void Poner_Fecha() {
@@ -63,10 +55,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 
 	void Dar_de_Alta() {
 		if (_poner_Cliente._cliente) {
-			if (_poner_Asunto._asunto) {
-
-				
-				
+			if (_poner_Asunto._asunto) {			
 				adm.Crear_Cita_Asunto_Cliente_Nuevos(_poner_Fecha.getFechaCita().getValue(), _poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
 						_poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(), _poner_Cliente._nuevo_Cliente.getDireccion().getValue(),
 						_poner_Cliente._nuevo_Cliente.getTelefono().getValue());
@@ -74,17 +63,14 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				_poner_Asunto._asunto = false;
 				_poner_Cliente._cliente = false;
 
-			} else {
-		
+			} else {	
 				if (_poner_Asunto.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
 				else {
 					if (_poner_Fecha.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 					else {
 				Asunto asunto = _poner_Asunto.getSeleccionAsunto().getValue();
 				adm.Crear_Cita_Nuevo_Cliente(_poner_Fecha.getFechaCita().getValue(), _poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(),
-						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID());
-
-				
+						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID());		
 				_poner_Cliente._cliente = false;
 				}
 				}

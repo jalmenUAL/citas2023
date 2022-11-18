@@ -24,7 +24,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	iUsuario usu = new Bd_Principal(); /* RARO*/
 	
 	public Ver_Citas_Activas() {
-		
+		 
 		cargar_citas_activas();
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
@@ -33,8 +33,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				Dar_por_realizada_Cita();
-				
+				Dar_por_realizada_Cita();				
 			}
 		});
 		this.getPosponerCita().addClickListener(new ComponentEventListener() {
@@ -42,8 +41,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				Posponer_Cita();
-				
+				Posponer_Cita();				
 			}
 		});
 
@@ -52,15 +50,12 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				cambiarFecha();
-				
+				cambiarFecha();			
 			}
 		});
 		
 	}
 	
-	
-
 	public void Posponer_Cita() {
 		this.getCambiarFecha().setVisible(true);
 		this.getNuevaFecha().setVisible(true);
@@ -70,9 +65,10 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		for (int i=0;i < this._item.size();i++)
         {
 			if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
-				{Integer id;
-		id = this._item.elementAt(i).cita.getID();
-		usu.Cita_Realizada(id);}
+				{	Integer id;
+					id = this._item.elementAt(i).cita.getID();
+					usu.Cita_Realizada(id);
+				}
         }
 		cargar_citas_activas();
 	}
@@ -95,16 +91,16 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		}
 	}
 	void cambiarFecha() {
-
-		
+	
 		for (int i=0;i < this._item.size();i++)
         {
-		if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue()) {
-		Integer id;
-		id = this._item.elementAt(i).cita.getID();
-		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());}
-        }
-			
+		if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue()) 
+				{
+					Integer id;
+					id = this._item.elementAt(i).cita.getID();
+					usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
+				}
+        }	
 		 cargar_citas_activas();
 	     this.getCambiarFecha().setVisible(false);
 		 this.getNuevaFecha().setVisible(false);

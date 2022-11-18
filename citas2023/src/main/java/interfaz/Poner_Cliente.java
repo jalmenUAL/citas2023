@@ -19,11 +19,6 @@ public class Poner_Cliente extends VistaPonerCliente {
 	iAdministrador adm = new Bd_Principal();
 	List<Cliente> cl = adm.Cargar_Clientes();
 
-	public void Nuevo_Cliente() {
-		_nuevo_Cliente.setVisible(false);
-		_cliente = true;
-	}
-	
 	public Poner_Cliente() { 
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Cliente);
 		_nuevo_Cliente.setVisible(false);
@@ -36,6 +31,10 @@ public class Poner_Cliente extends VistaPonerCliente {
 				Nuevo_Cliente();
 			}
 		});
+	}
+	public void Nuevo_Cliente() {
+		_nuevo_Cliente.setVisible(true);
+		_cliente = true;
 	}
 
 	 

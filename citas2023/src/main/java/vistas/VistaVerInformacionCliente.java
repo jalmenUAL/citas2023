@@ -10,7 +10,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.templatemodel.TemplateModel;
-
+ 
 /**
  * A Designer generated component for the vista-ver-informacion-cliente template.
  *
@@ -43,8 +43,7 @@ public class VistaVerInformacionCliente extends PolymerTemplate<VistaVerInformac
 	private Label label2;
 	@Id("telefono")
 	private TextField telefono;
-	@Id("vaadinButton")
-	private Button vaadinButton;
+	 
 	/**
      * Creates a new VistaVerInformacionCliente.
      */
@@ -83,11 +82,5 @@ public class VistaVerInformacionCliente extends PolymerTemplate<VistaVerInformac
 		this.telefono = telefono;
 	}
 
-	public Button getVaadinButton() {
-		return vaadinButton;
-	}
-
-	public void setVaadinButton(Button vaadinButton) {
-		this.vaadinButton = vaadinButton;
-	}
+ 
 }

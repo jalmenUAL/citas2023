@@ -11,19 +11,19 @@ public class Poner_Asunto extends VistaPonerAsunto {
 	
 	Boolean _asunto = false;
 
-	public void Nuevo_Asunto() {
-		_nuevo_Asunto.setVisible(false);
-		_asunto = true;
-	}
 	
-	public Poner_Asunto() {
-		 
+	public Poner_Asunto() {	 
+		_nuevo_Asunto.setVisible(false);
 		this.getBotonNuevoAsunto().addClickListener(new ComponentEventListener() {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
 				Nuevo_Asunto();
 			}
-		});
+		});		
+	}
+	public void Nuevo_Asunto() {
+		_nuevo_Asunto.setVisible(true);
+		_asunto = true;
 	}
 }
