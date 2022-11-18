@@ -7,7 +7,7 @@ import vistas.VistaPonerAsunto;
 
 public class Poner_Asunto extends VistaPonerAsunto {
 	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
-	public Nuevo_Asunto _nuevo_Asunto;
+	public Nuevo_Asunto _nuevo_Asunto = new Nuevo_Asunto();
 	
 	Boolean _asunto = false;
 

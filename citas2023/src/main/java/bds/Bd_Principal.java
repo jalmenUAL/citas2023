@@ -10,7 +10,7 @@ import basededatos.Asunto;
 import basededatos.Cliente;
 import basededatos.Fecha;
 
-public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, Serializable {
+public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLogeado, Serializable {
 
 	Bd_Citas citas = new Bd_Citas();
 	Bd_Asuntos asuntos = new Bd_Asuntos();

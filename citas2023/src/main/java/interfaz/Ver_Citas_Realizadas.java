@@ -14,7 +14,7 @@ public class Ver_Citas_Realizadas extends Ver_Citas {
 	public Gestionar_Citas _gestionar_Citas;
 	public Vector<Ver_Citas_Realizadas_item> _item = new Vector<Ver_Citas_Realizadas_item>();
 	
-	iAdministrador adm = new Bd_Principal();
+	iAdministrador adm = _gestionar_Citas._administrador._iAdministrador;
 	
 	public void cargar_citas_realizadas() {
 		 List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();

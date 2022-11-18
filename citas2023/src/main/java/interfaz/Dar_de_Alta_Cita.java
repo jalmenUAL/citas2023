@@ -14,12 +14,12 @@ import vistas.VistaDarDeAlta;
 public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	/*private event _dar_de_Alta;*/
 	public Gestionar_Citas _gestionar_Citas;
-	public Poner_Fecha _poner_Fecha;
-	public Poner_Asunto _poner_Asunto;
-	public Poner_Cliente _poner_Cliente;
+	public Poner_Fecha _poner_Fecha = new Poner_Fecha();
+	public Poner_Asunto _poner_Asunto = new Poner_Asunto();
+	public Poner_Cliente _poner_Cliente = new Poner_Cliente();
 	public Servidor_de_Correo _servidor_de_Correo = new Servidor_de_Correo();
 
-	iAdministrador adm = new Bd_Principal();
+	iAdministrador adm = _gestionar_Citas._administrador._iAdministrador;
 
 	public void Enviar_Correo() {
 		_servidor_de_Correo.Enviar_Correo();

@@ -7,22 +7,23 @@ import vistas.VistaGestionarCitas;
 
 public class Gestionar_Citas extends VistaGestionarCitas {
 	public Administrador _administrador;
-	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
-	public Ver_Citas_Realizadas _ver_Citas_Realizadas;
+	public Dar_de_Alta_Cita _dar_de_Alta_Cita = new Dar_de_Alta_Cita();
+	public Ver_Citas_Realizadas _ver_Citas_Realizadas = new Ver_Citas_Realizadas();
 
 	public Gestionar_Citas() {
 		
-		Dar_de_Alta_Cita();
 		Ver_Citas_Realizadas();
+		Dar_de_Alta_Cita();
 		
-		_dar_de_Alta_Cita.getDarDeAta().addClickListener(new ComponentEventListener() {
+		
+		/*_dar_de_Alta_Cita.getDarDeAta().addClickListener(new ComponentEventListener() {
 			 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
 				_dar_de_Alta_Cita.Dar_de_Alta();
 			}
-		});
+		});*/
 		
 	}
 

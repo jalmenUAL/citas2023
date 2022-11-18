@@ -2,13 +2,28 @@ package interfaz;
 
 import java.util.Vector;
 
+import bds.Bd_Principal;
+import bds.iAdministrador;
+import bds.iUsuario;
 import vistas.VistaVercitas;
 
 public class Ver_Citas extends VistaVercitas {
 	/*private event _dar_de_Baja;*/
 	public Vector<Ver_Citas_item> _item = new Vector<Ver_Citas_item>();
+	
+	/*OJO CLASE GENERICA, adm  */
+	
+	iAdministrador adm = new Bd_Principal();
 
-	public void Dar_de_Baja() {
-		throw new UnsupportedOperationException();
+	void Dar_de_Baja() {
+		 
+		for (int i=0;i < this._item.size();i++)
+        {
+				Integer id = this._item.elementAt(i).cita.getID();
+
+				adm.Baja_Cita_Activa(id);
+        }
+
+		 
 	}
 }

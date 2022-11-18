@@ -9,14 +9,14 @@ import vistas.VistaVercitasitem;
 public class Ver_Citas_item extends VistaVercitasitem {
 	/*private event _seleccionar;*/
 	public Ver_Citas _ver_Citas;
-	public Ver_Informacion_Cliente _ver_Informacion_Cliente;
+	public Ver_Informacion_Cliente _ver_Informacion_Cliente = new Ver_Informacion_Cliente();
 
 	iAdministrador adm = new Bd_Principal();
 	Cita cita;
 	 
 
 	public void Seleccionar() {
-		throw new UnsupportedOperationException();
+		 
 	}
 	
  

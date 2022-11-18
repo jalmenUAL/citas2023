@@ -14,7 +14,7 @@ class VistaLogin extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-login-form id="vaadinLoginForm" style="align-self: center;"></vaadin-login-form>
+ <vaadin-login-form id="vaadinLoginForm"></vaadin-login-form>
 </vaadin-vertical-layout>
 `;
     }

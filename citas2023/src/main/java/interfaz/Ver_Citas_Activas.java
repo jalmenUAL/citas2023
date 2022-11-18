@@ -89,7 +89,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			_item.add(vci);
 		}
 	}
-void cambiarFecha() {
+	void cambiarFecha() {
 
 		
 		for (int i=0;i < this._item.size();i++)
