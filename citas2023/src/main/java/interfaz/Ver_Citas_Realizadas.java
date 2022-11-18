@@ -26,7 +26,8 @@ public class Ver_Citas_Realizadas extends Ver_Citas {
 	
 	public void cargar_citas_realizadas() {
 		 List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();
-			
+		 this.getTabla().as(VerticalLayout.class).removeAll();
+		 _item.clear();
 			for (int i=0; i<cr.size();i++)
 			{
 				Ver_Citas_Realizadas_item vci = new Ver_Citas_Realizadas_item(cr.get(i));

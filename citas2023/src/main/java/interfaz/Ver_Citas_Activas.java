@@ -80,6 +80,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	public void cargar_citas_activas() {
 		
 		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
+		this.getTabla().as(VerticalLayout.class).removeAll();
+		_item.clear();
 		
 		for (int i=0; i<ca.size();i++)
 		{
