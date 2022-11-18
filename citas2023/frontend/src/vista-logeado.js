@@ -17,7 +17,7 @@ class VistaLogeado extends PolymerElement {
  <vaadin-button id="Logout" style="align-self: flex-end;">
    Logout 
  </vaadin-button>
- <vaadin-vertical-layout theme="spacing" id="Conenido" style="align-self: stretch; width: 100%; height: 100%; flex-grow: 1;"></vaadin-vertical-layout>
+ <vaadin-vertical-layout id="Conenido" style="width: 100%; height: 100%; flex-grow: 1;"></vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
     }

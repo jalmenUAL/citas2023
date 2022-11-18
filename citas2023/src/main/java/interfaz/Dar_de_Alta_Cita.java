@@ -37,7 +37,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {			
 				 Dar_de_Alta();
-				 Notification.show("Cita Añadida Exitósamente");
+				 Enviar_Correo();
 				 _poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
 					_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
 				

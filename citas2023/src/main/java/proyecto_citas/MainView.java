@@ -55,8 +55,12 @@ public class MainView extends VerticalLayout {
     public MainView() {
     	
     	 this.getElement().setProperty("background","#ffe4c4;");
+    	 this.getElement().setProperty("width", "100%");
+    	 this.getElement().setProperty("height", "100%");
     	
     	No_Logeado nl = new No_Logeado();
+    	nl.getElement().setProperty("width", "100%");
+    	nl.getElement().setProperty("background","#ffe4c4;");
     	
         add(nl);
         
@@ -72,6 +76,8 @@ public class MainView extends VerticalLayout {
 					removeAll();
 					
 					gc.getElement().setProperty("width", "100%");
+					gc.getElement().setProperty("height", "100%");
+					gc.getElement().setProperty("background","#ffe4c4;");
 					add(gc);
 					
 					gc.getLogout().addClickListener(new ComponentEventListener() {
@@ -88,6 +94,8 @@ public class MainView extends VerticalLayout {
 					removeAll();
 					
 					gc.getElement().setProperty("width", "100%");
+					gc.getElement().setProperty("height", "100%");
+					gc.getElement().setProperty("background","#ffe4c4;");
 					add(gc);
 					
 					gc.getLogout().addClickListener(new ComponentEventListener() {

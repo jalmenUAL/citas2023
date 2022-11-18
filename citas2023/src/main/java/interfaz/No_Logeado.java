@@ -14,6 +14,7 @@ public class No_Logeado extends VistaNologeado {
 	}
 	
 	public void Login() {	
+		
 		 this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_login);
 	}
 }
