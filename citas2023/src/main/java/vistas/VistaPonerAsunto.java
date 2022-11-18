@@ -10,6 +10,7 @@ import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
 import basededatos.Asunto;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-poner-asunto template.
@@ -27,6 +28,8 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
 	private ComboBox<Asunto> seleccionAsunto;
 	@Id("BotonNuevoAsunto")
 	private Button botonNuevoAsunto;
+	@Id("label")
+	private Label label;
 
 	/**
      * Creates a new VistaPonerAsunto.

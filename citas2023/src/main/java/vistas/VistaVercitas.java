@@ -8,6 +8,8 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.html.Label;
+ 
 
 /**
  * A Designer generated component for the vista-vercitas template.
@@ -63,6 +65,13 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	@Id("darBaja")
 	private Button darBaja;
+
+
+
+
+
+	@Id("titulo")
+	private Label titulo;
 	 
 
 	 
@@ -138,6 +147,14 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	public void setDarBaja(Button darBaja) {
 		this.darBaja = darBaja;
+	}
+
+	public Label getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(Label titulo) {
+		this.titulo = titulo;
 	}
 
 	 

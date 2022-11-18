@@ -7,6 +7,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-poner-fecha template.
@@ -22,6 +23,8 @@ public class VistaPonerFecha extends PolymerTemplate<VistaPonerFecha.VistaPonerF
 	private Element vaadinVerticalLayout;
 	@Id("fechaCita")
 	private DatePicker fechaCita;
+	@Id("label")
+	private Label label;
 
 	/**
      * Creates a new VistaPonerFecha.

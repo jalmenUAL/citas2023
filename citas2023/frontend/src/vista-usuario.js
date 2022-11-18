@@ -12,7 +12,7 @@ class VistaUsuario extends PolymerElement {
         			width: 100%;
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%; background:#ffe4c4;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
 `;
     }
 

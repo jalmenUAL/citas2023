@@ -10,6 +10,7 @@ import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
 import basededatos.Cliente;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-poner-cliente template.
@@ -27,6 +28,8 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 	private Button BotonNuevoCliente;
 	@Id("seleccionCliente")
 	private ComboBox<Cliente> seleccionCliente;
+	@Id("label")
+	private Label label;
 	/**
      * Creates a new VistaPonerCliente.
      */

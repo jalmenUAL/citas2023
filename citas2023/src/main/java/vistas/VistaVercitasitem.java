@@ -10,7 +10,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
-
+ 
 /**
  * A Designer generated component for the vista-vercitasitem template.
  *

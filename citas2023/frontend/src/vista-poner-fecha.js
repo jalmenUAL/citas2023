@@ -14,6 +14,7 @@ class VistaPonerFecha extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <label id="label" style="align-self: stretch;">Fecha</label>
  <vaadin-date-picker id="fechaCita" style="align-self: stretch;"></vaadin-date-picker>
 </vaadin-vertical-layout>
 `;

@@ -54,6 +54,8 @@ public class MainView extends VerticalLayout {
 	
     public MainView() {
     	
+    	 this.getElement().setProperty("background","#ffe4c4;");
+    	
     	No_Logeado nl = new No_Logeado();
     	
         add(nl);

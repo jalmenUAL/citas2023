@@ -26,6 +26,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	
 	public Ver_Citas_Activas() {
 		 
+		this.getTitulo().setText("Citas Activas");
 		cargar_citas_activas();
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
@@ -117,15 +118,5 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		 this.getNuevaFecha().setVisible(false);
 		 
 	}
-	/*void Dar_de_Baja() {
-		for (int i=0;i < this._item.size();i++)
-        {
-				Integer id = this._item.elementAt(i).cita.getID();
-				if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
-							{ 
-							adm.Baja_Cita(id);
-							}
-        }
-		Notification.show("Cita dada de baja satisfactoriamente");
-	}*/
+	 
 }

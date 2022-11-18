@@ -15,15 +15,15 @@ class VistaGestionarCitas extends PolymerElement {
                 }
             </style>
 <vaadin-horizontal-layout style="width: 100%; height: 100%;" id="vaadinHorizontalLayout">
- <vaadin-vertical-layout class="sidebar" id="Menu">
-  <vaadin-button id="botonVerCitasRealizadas" style="align-self: stretch;">
-   Ver Citas Realizadas 
+ <vaadin-vertical-layout class="sidebar" id="Menu" style="background:#deb887;">
+  <vaadin-button id="botonVerCitasRealizadas" style="align-self: stretch;" theme="primary">
+    Ver Citas Realizadas 
   </vaadin-button>
-  <vaadin-button id="botondardeAltaCita" style="align-self: stretch;">
-   Dar de Alta a Cita 
+  <vaadin-button id="botondardeAltaCita" style="align-self: stretch;" theme="primary">
+    Dar de Alta a Cita 
   </vaadin-button>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout class="content" style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;" id="Ventana"></vaadin-vertical-layout>
+ <vaadin-vertical-layout class="content" style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;background:#ffe4c4;" id="Ventana"></vaadin-vertical-layout>
 </vaadin-horizontal-layout>
 `;
     }

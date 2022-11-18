@@ -15,6 +15,7 @@ class VistaVercitas extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <label id="titulo" style="align-self: stretch; font-size: 1.875em;font-weight: bold;">Label</label>
  <vaadin-vertical-layout theme="spacing" id="tabla" style="align-self: stretch;"></vaadin-vertical-layout>
  <vaadin-button theme="primary" id="darPorRealizadaCita" style="flex-grow: 0; align-self: stretch;">
    Dar Por Realizada 
