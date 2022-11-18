@@ -13,6 +13,7 @@ class VistaVerInformacionCliente extends PolymerElement {
                     display: block;
                     height: 100%;
                     width: 100%;
+background:#ffe4c4;
                 }
             </style>
 <vaadin-form-layout id="vaadinFormLayout" style="width: 100%; height: 100%;">
