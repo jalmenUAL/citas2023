@@ -14,15 +14,15 @@ class VistaLogin extends PolymerElement {
                     display: block;
                     height: 100%;
         			width: 100%;
-background:#ffe4c4;
+ 
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;background:#ffe4c4;" id="vaadinVerticalLayout">
- <label style="align-self: center; font-size: 1.875em;font-weight: bold">Bienvenido al Sistemas de Citas</label>
- <vaadin-form-layout id="login" style="align-self: center;">
+<vaadin-vertical-layout style="width: 100%; height: 100%;background:#dfe3ee;" id="vaadinVerticalLayout">
+ <label style="align-self: center; font-size: 1.875em;font-weight: bold;">Bienvenido al Sistemas de Citas</label>
+ <vaadin-form-layout id="login" style="align-self: center;background:white;">
   <vaadin-text-field error-message="Please enter a value" required invalid="" label="Required" id="usuario"></vaadin-text-field>
   <vaadin-password-field id="password"></vaadin-password-field>
-  <vaadin-button id="botonlogin">
+  <vaadin-button id="botonlogin" theme="primary">
     Login 
   </vaadin-button>
  </vaadin-form-layout>

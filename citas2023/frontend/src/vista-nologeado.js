@@ -10,10 +10,10 @@ class VistaNologeado extends PolymerElement {
                     display: block;
                     height: 100%;
         			width: 100%;
-background:#ffe4c4;
+ 
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%;background:#dfe3ee;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
 `;
     }
 

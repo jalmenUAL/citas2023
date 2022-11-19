@@ -46,15 +46,15 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	}
 	
 	public void Poner_Fecha() {
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Fecha);
+		this.getDatos_cita().as(VerticalLayout.class).add(_poner_Fecha);
 	}
 
 	public void Poner_Asunto() {
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Asunto);
+		this.getDatos_cita().as(VerticalLayout.class).add(_poner_Asunto);
 	}
 
 	public void Poner_Cliente() {
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).addComponentAsFirst(_poner_Cliente);
+		this.getDatos_cita().as(VerticalLayout.class).add(_poner_Cliente);
 	}
 
 	void Dar_de_Alta() {

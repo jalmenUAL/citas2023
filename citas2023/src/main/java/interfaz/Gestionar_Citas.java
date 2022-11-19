@@ -13,6 +13,8 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 
 	public Gestionar_Citas() {
 		
+		 
+		
 		this.getBotondardeAltaCita().addClickListener(new ComponentEventListener() {
 			 
 			@Override

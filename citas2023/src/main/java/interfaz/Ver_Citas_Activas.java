@@ -25,6 +25,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	iUsuario usu = new Bd_Principal(); /* RARO*/
 	
 	public Ver_Citas_Activas() {
+		
+		 
 		 
 		this.getTitulo().setText("Citas Activas");
 		cargar_citas_activas();

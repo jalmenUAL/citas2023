@@ -7,7 +7,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
-
+ 
 /**
  * A Designer generated component for the vista-dar-de-alta template.
  *
@@ -23,6 +23,8 @@ public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAlt
 	private Button darDeAta;
 	@Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
+	@Id("datos_cita")
+	private Element datos_cita;
 
 	/**
      * Creates a new VistaDarDeAlta.
@@ -54,5 +56,13 @@ public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAlt
 
 	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public Element getDatos_cita() {
+		return datos_cita;
+	}
+
+	public void setDatos_cita(Element datos_cita) {
+		this.datos_cita = datos_cita;
 	}
 }

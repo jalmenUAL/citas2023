@@ -1,6 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 class VistaDarDeAlta extends PolymerElement {
 
@@ -11,11 +11,11 @@ class VistaDarDeAlta extends PolymerElement {
                     display: block;
                     height: 100%;
                     width: 100%;
-background:#ffe4c4;
-                }
+                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-button id="darDeAta" style="align-self: stretch;">
+<vaadin-vertical-layout style="width: 100%; background:#dfe3ee;" id="vaadinVerticalLayout">
+ <vaadin-vertical-layout theme="spacing" id="datos_cita"></vaadin-vertical-layout>
+ <vaadin-button id="darDeAta" style="align-self: stretch;" theme=" primary success">
    Dar de Alta Cita 
  </vaadin-button>
 </vaadin-vertical-layout>

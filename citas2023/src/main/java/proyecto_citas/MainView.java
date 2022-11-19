@@ -39,6 +39,10 @@ import org.springframework.beans.factory.annotation.Autowired;
         description = "This is an example Vaadin application.",
         enableInstallPrompt = false)
 @CssImport("./styles/shared-styles.css")
+
+//Añadir para cambiar el estilo
+@CssImport("./styles/my-view.css")
+
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class MainView extends VerticalLayout {
 
@@ -53,14 +57,13 @@ public class MainView extends VerticalLayout {
 	 
 	
     public MainView() {
-    	
-    	 this.getElement().setProperty("background","#ffe4c4;");
-    	 this.getElement().setProperty("width", "100%");
-    	 this.getElement().setProperty("height", "100%");
+    	 //color de fondo
+    	 this.getElement().getStyle().set("background-color","#dfe3ee");
+    	 this.setSizeFull();
+    	 // 
     	
     	No_Logeado nl = new No_Logeado();
-    	nl.getElement().setProperty("width", "100%");
-    	nl.getElement().setProperty("background","#ffe4c4;");
+    	 
     	
         add(nl);
         
@@ -75,9 +78,7 @@ public class MainView extends VerticalLayout {
 					Administrador gc = new Administrador();	
 					removeAll();
 					
-					gc.getElement().setProperty("width", "100%");
-					gc.getElement().setProperty("height", "100%");
-					gc.getElement().setProperty("background","#ffe4c4;");
+					 
 					add(gc);
 					
 					gc.getLogout().addClickListener(new ComponentEventListener() {
@@ -93,9 +94,8 @@ public class MainView extends VerticalLayout {
 					Usuario gc = new Usuario();
 					removeAll();
 					
-					gc.getElement().setProperty("width", "100%");
-					gc.getElement().setProperty("height", "100%");
-					gc.getElement().setProperty("background","#ffe4c4;");
+					 
+					 
 					add(gc);
 					
 					gc.getLogout().addClickListener(new ComponentEventListener() {

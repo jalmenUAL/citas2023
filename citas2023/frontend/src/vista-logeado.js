@@ -1,5 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-icons/vaadin-icons.js';
+import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 class VistaLogeado extends PolymerElement {
@@ -11,14 +13,14 @@ class VistaLogeado extends PolymerElement {
                     display: block;
                     height: 100%;
         			width: 100%;
-background:#ffe4c4;
+ 
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;background:#ffe4c4;	" id="Marco">
+<vaadin-vertical-layout style="width: 100%; height: 100%;background:#dfe3ee;	" id="Marco">
  <vaadin-button id="Logout" style="align-self: flex-end;">
-   Logout 
+  <iron-icon icon="vaadin:sign-out-alt" id="ironIcon"></iron-icon>
  </vaadin-button>
- <vaadin-vertical-layout id="Conenido" style="width: 100%; height: 100%; flex-grow: 1;"></vaadin-vertical-layout>
+ <vaadin-vertical-layout id="Conenido" style="width: 100%; height: 100%; flex-grow: 1;background:#dfe3ee;"></vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
     }

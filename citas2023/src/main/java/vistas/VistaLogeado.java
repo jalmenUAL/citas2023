@@ -25,6 +25,9 @@ public class VistaLogeado extends PolymerTemplate<VistaLogeado.VistaLogeadoModel
 	private Button logout;
 	@Id("Conenido")
 	private Element conenido;
+	 
+	@Id("ironIcon")
+	private Element ironIcon;
 
 	/**
      * Creates a new VistaLogeado.

@@ -11,7 +11,7 @@ class VistaPonerFecha extends PolymerElement {
                     display: block;
                     height: 100%;
         			width: 100%;
-background:#ffe4c4;
+ 
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
