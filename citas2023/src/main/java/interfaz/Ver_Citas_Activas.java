@@ -75,14 +75,19 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	}
 
 	public void Dar_por_realizada_Cita() {
+		Boolean realizada = false;
 		for (int i=0;i < this._item.size();i++)
         {
 			if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
 				{	Integer id;
 					id = this._item.elementAt(i).cita.getID();
 					usu.Cita_Realizada(id);
+					realizada = true;
 				}
         }
+		if (realizada) {
+			Notification.show("Citas dadas por realizadas satisfactoriamente");}
+			else Notification.show("No hay ninguna cita a la que dar por realizada");
 		cargar_citas_activas();
 	}
 	
@@ -106,6 +111,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	}
 	void cambiarFecha() {
 	
+		Boolean cambiada = false;
 		for (int i=0;i < this._item.size();i++)
         {
 		if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue()) 
@@ -113,9 +119,13 @@ public class Ver_Citas_Activas extends Ver_Citas {
 					Integer id;
 					id = this._item.elementAt(i).cita.getID();
 					usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
+					cambiada = true;
 				}
         }	
 		 cargar_citas_activas();
+		 if (cambiada) {
+				Notification.show("Citas modificadas satisfactoriamente");}
+				else Notification.show("No hay ninguna cita que modificar");
 	     this.getCambiarFecha().setVisible(false);
 		 this.getNuevaFecha().setVisible(false);
 		 

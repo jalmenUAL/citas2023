@@ -1,6 +1,7 @@
 package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.Route;
 
 import bds.Bd_Principal;
 import bds.iAdministrador;

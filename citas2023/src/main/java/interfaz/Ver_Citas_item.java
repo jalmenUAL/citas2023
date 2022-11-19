@@ -32,8 +32,7 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	public void mostrar_informacion() {
 		Dialog dialog = new Dialog();
 		dialog.add(_ver_Informacion_Cliente);
-		dialog.getElement().setProperty("height","500pt");
-		Button OkButton = new Button("Ok", e -> {dialog.close();});
+		Button OkButton = new Button("Cerrar", e -> {dialog.close();});
 		dialog.add(OkButton);
 		dialog.open();
 		 

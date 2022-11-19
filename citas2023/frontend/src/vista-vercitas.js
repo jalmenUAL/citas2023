@@ -28,7 +28,7 @@ class VistaVercitas extends PolymerElement {
    Cambiar Fecha 
  </vaadin-button>
  <vaadin-date-picker id="nuevaFecha" style="align-self: stretch;"></vaadin-date-picker>
- <vaadin-button id="darBaja" style="align-self: stretch;">
+ <vaadin-button id="darBaja" style="align-self: stretch;" theme="primary error">
    Dar de Baja 
  </vaadin-button>
 </vaadin-vertical-layout>

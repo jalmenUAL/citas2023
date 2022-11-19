@@ -18,14 +18,20 @@ public class Ver_Citas extends VistaVercitas {
 	iAdministrador adm = new Bd_Principal();
 	
 	void Dar_de_Baja() {
+		
+	
+		Boolean baja = false;
 		for (int i=0;i < this._item.size();i++)
         {
 				Integer id = this._item.elementAt(i).cita.getID();
 				if (this._item.elementAt(i).getSeleccionar().getValue().booleanValue())
 							{ 
 							adm.Baja_Cita(id);
+							baja = true;
 							}
         }
-		Notification.show("Cita dada de baja satisfactoriamente");
+		if (baja) {
+		Notification.show("Citas dadas de baja satisfactoriamente");}
+		else Notification.show("No hay ninguna cita a la que dar de baja");
 	}
 }

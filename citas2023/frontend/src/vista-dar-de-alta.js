@@ -14,7 +14,8 @@ class VistaDarDeAlta extends PolymerElement {
                  }
             </style>
 <vaadin-vertical-layout style="width: 100%; background:#dfe3ee;" id="vaadinVerticalLayout">
- <vaadin-vertical-layout theme="spacing" id="datos_cita"></vaadin-vertical-layout>
+ <label style="font-size: 1.875em; font-weight: bold; align-self: stretch;">Dar de Alta Cita</label>
+ <vaadin-vertical-layout theme="spacing" id="datos_cita" style="align-self: stretch;"></vaadin-vertical-layout>
  <vaadin-button id="darDeAta" style="align-self: stretch;" theme=" primary success">
    Dar de Alta Cita 
  </vaadin-button>
