@@ -21,8 +21,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	//public   Vector<Ver_Citas_Activas_item> _item = new Vector<Ver_Citas_Activas_item>();
 	
 	Ver_Citas_Activas_item vci;
-	iAdministrador adm = new Bd_Principal();
-	iUsuario usu = new Bd_Principal(); /* RARO*/
+	 
+	iUsuario usu = new Bd_Principal();  
 	
 	public Ver_Citas_Activas() {
 		
@@ -108,6 +108,8 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			this.getTabla().as(VerticalLayout.class).add(vci);
 			_item.add(vci);
 		}
+		
+		 
 	}
 	void cambiarFecha() {
 	

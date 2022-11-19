@@ -17,6 +17,8 @@ public class Ver_Citas extends VistaVercitas {
 
 	iAdministrador adm = new Bd_Principal();
 	
+	
+	
 	void Dar_de_Baja() {
 		
 	
