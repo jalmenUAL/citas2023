@@ -6,9 +6,9 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
 
-import bds.Bd_Principal;
-import bds.iAdministrador;
-import bds.iUsuario;
+import basededatos.Bd_Principal;
+import basededatos.iAdministrador;
+import basededatos.iUsuario;
 import vistas.VistaVercitas;
 
 public class Ver_Citas extends VistaVercitas {
@@ -19,7 +19,7 @@ public class Ver_Citas extends VistaVercitas {
 	
 	
 	
-	void Dar_de_Baja() {
+	public void Dar_de_Baja() {
 		
 	
 		Boolean baja = false;

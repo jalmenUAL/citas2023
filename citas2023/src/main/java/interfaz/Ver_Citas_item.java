@@ -6,10 +6,10 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.Bd_Principal;
 import basededatos.Cita;
 import basededatos.Cliente;
-import bds.Bd_Principal;
-import bds.iAdministrador;
+import basededatos.iAdministrador;
 import vistas.VistaVercitasitem;
 
 public class Ver_Citas_item extends VistaVercitasitem {

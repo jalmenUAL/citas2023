@@ -1,4 +1,4 @@
-package bds;
+package basededatos;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -6,30 +6,15 @@ import java.util.List;
 
 import org.orm.PersistentException;
 
-import basededatos.Asunto;
-import basededatos.Cliente;
-import basededatos.Fecha;
-
-public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLogeado, Serializable {
+public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLogeado,  Serializable {
 
 	Bd_Citas citas = new Bd_Citas();
 	Bd_Asuntos asuntos = new Bd_Asuntos();
 	Bd_Clientes clientes = new Bd_Clientes();
 
-	public static void main(String[] args) {
+	 
 
-	};
-
-	public Cliente Cargar_Informacion_Cliente(int Cita) {
-		Cliente cl = null;
-		try {
-			cl = clientes.Cargar_Informacion_Cliente(Cita);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return cl;
-	};
+	 
 
 	public void Crear_Cita(LocalDate fecha, int Cliente, int Asunto) {
 		try {
@@ -51,25 +36,9 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 
 	}
 
-	public void Baja_Cita_Activa(int ID) {
-		try {
-			citas.Baja_Cita_Activa(ID);
+	 
 
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public void Baja_Cita_Realizada(int ID) {
-		try {
-			citas.Baja_Cita_Realizada(ID);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	 
 
 	public void Crear_Cita_Nuevo_Asunto(LocalDate fecha, String Asunto, int Cliente) {
 
@@ -146,51 +115,11 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 		}
 	}
 
-	public Cliente Cargar_Cliente(int Cita) {
-
-		Cliente cl = null;
-
-		try {
-			cl = citas.Cargar_Cliente(Cita);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return cl;
-	}
-
-	public Asunto Cargar_Asunto(int Cita) {
-		Asunto as = null;
-
-		try {
-			as = citas.Cargar_Asunto(Cita);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return as;
-	}
-
-	public Fecha Cargar_Fecha(int Cita) {
-
-		Fecha f = null;
-
-		try {
-			f = citas.Cargar_Fecha(Cita);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return f;
-	}
-
-	public List Cargar_Citas_Pendientes() {
+	 
+	public List Cargar_Citas_Activas() {
 		List citas_activas = null;
 		try {
-			citas_activas = citas.Cargar_Citas_Pendientes();
+			citas_activas = citas.Cargar_Citas_Activas();
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -208,6 +137,10 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 		}
 		return citas_realizadas;
 	}
+
+
+
+	 
 
 	 
 }

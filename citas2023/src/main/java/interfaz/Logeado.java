@@ -4,8 +4,8 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-import bds.Bd_Principal;
-import bds.iLogeado;
+import basededatos.Bd_Principal;
+import basededatos.iLogeado;
 import vistas.VistaLogeado;
 
 public class Logeado extends VistaLogeado {

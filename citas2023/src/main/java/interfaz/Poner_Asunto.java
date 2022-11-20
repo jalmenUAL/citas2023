@@ -7,9 +7,9 @@ import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Asunto;
+import basededatos.Bd_Principal;
 import basededatos.Cliente;
-import bds.Bd_Principal;
-import bds.iAdministrador;
+import basededatos.iAdministrador;
 import vistas.VistaPonerAsunto;
 
 public class Poner_Asunto extends VistaPonerAsunto {

@@ -6,9 +6,9 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.Bd_Principal;
 import basededatos.Cliente;
-import bds.Bd_Principal;
-import bds.iAdministrador;
+import basededatos.iAdministrador;
 import vistas.VistaPonerCliente;
 
 public class Poner_Cliente extends VistaPonerCliente {

@@ -1,4 +1,4 @@
-package bds;
+package basededatos;
 
 import java.io.Serializable;
 import java.util.List;
@@ -6,30 +6,9 @@ import java.util.List;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import basededatos.Cita;
-import basededatos.CitaDAO;
-import basededatos.Cliente;
-import basededatos.ClienteDAO;
-import basededatos.GestiondeCitasPersistentManager;
-
 public class Bd_Clientes implements Serializable {
 
-	public Cliente Cargar_Informacion_Cliente(int Cita) throws PersistentException {
-		Cliente cl = null;
-		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
-
-			Cita c = CitaDAO.getCitaByORMID(Cita);
-			cl = ClienteDAO.getClienteByORMID(c.getCliente().getID());
-
-			t.commit();
-		} catch (Exception e) {
-			t.rollback();
-		}
-
-		return cl;
-
-	}
+	 
 
 	public int Nuevo_Cliente(String Nombre, String Direccion, String Telefono) throws PersistentException {
 		int id_cliente = -1;

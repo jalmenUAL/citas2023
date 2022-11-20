@@ -3,7 +3,7 @@ package interfaz;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-import bds.iUsuario;
+import basededatos.iUsuario;
 
 
 public class Usuario extends Logeado {

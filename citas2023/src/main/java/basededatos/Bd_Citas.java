@@ -1,4 +1,4 @@
-package bds;
+package basededatos;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -10,19 +10,6 @@ import java.util.List;
 
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
-
-import basededatos.Asunto;
-import basededatos.AsuntoDAO;
-import basededatos.Cita;
-import basededatos.CitaDAO;
-import basededatos.Cita_Activa;
-import basededatos.Cita_ActivaDAO;
-import basededatos.Cita_RealizadaDAO;
-import basededatos.Cliente;
-import basededatos.ClienteDAO;
-import basededatos.Fecha;
-import basededatos.FechaDAO;
-import basededatos.GestiondeCitasPersistentManager;
 
 public class Bd_Citas implements Serializable {
 
@@ -174,83 +161,10 @@ public class Bd_Citas implements Serializable {
 
 	}
 
-	public void Baja_Cita_Realizada(int ID) throws PersistentException {
-		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
+	
+	 
 
-			Cita c = CitaDAO.loadCitaByORMID(ID);
-
-			Fecha f = FechaDAO.loadFechaByORMID(c.getFecha().getID());
-			FechaDAO.delete(f);
-			t.commit();
-		} catch (Exception e) {
-			t.rollback();
-		}
-
-		PersistentTransaction t2 = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
-
-			basededatos.Cita_Realizada ca = Cita_RealizadaDAO.loadCita_RealizadaByORMID(ID);
-			Cita c = CitaDAO.loadCitaByORMID(ID);
-			Cita_RealizadaDAO.delete(ca);
-			CitaDAO.delete(c);
-			t2.commit();
-		} catch (Exception e) {
-			t2.rollback();
-		}
-		GestiondeCitasPersistentManager.instance().disposePersistentManager();
-
-	}
-
-	public Cliente Cargar_Cliente(int cita) throws PersistentException {
-
-		Cliente cl = null;
-		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
-
-			Cita c = CitaDAO.loadCitaByORMID(cita);
-			cl = c.getCliente();
-
-		} catch (Exception e) {
-			t.rollback();
-		}
-
-		return cl;
-	}
-
-	public Asunto Cargar_Asunto(int cita) throws PersistentException {
-		Asunto as = null;
-
-		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
-
-			Cita c = CitaDAO.loadCitaByORMID(cita);
-			as = c.getEs_para();
-
-		} catch (Exception e) {
-			t.rollback();
-		}
-
-		return as;
-
-	}
-
-	public Fecha Cargar_Fecha(int cita) throws PersistentException {
-		Fecha f = null;
-		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
-		try {
-
-			Cita c = CitaDAO.loadCitaByORMID(cita);
-			f = c.getFecha();
-
-		} catch (Exception e) {
-			t.rollback();
-		}
-
-		return f;
-	}
-
-	public List Cargar_Citas_Pendientes() throws PersistentException {
+	public List Cargar_Citas_Activas() throws PersistentException {
 		List<Cita_Activa> citas_act = null;
 
 		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();

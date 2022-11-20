@@ -1,14 +1,10 @@
-package bds;
+package basededatos;
 
 import java.io.Serializable;
 import java.util.List;
 
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
-
-import basededatos.Asunto;
-import basededatos.AsuntoDAO;
-import basededatos.GestiondeCitasPersistentManager;
 
 public class Bd_Asuntos implements Serializable {
 

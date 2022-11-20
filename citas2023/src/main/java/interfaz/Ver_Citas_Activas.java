@@ -8,10 +8,10 @@ import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.Bd_Principal;
 import basededatos.Cita_Activa;
-import bds.Bd_Principal;
-import bds.iAdministrador;
-import bds.iUsuario;
+import basededatos.iAdministrador;
+import basededatos.iUsuario;
 import interfaz.Ver_Citas_Activas_item;
 
 public class Ver_Citas_Activas extends Ver_Citas {
@@ -93,7 +93,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 	
 	public void cargar_citas_activas() {
 		
-		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
+		List<Cita_Activa> ca = adm.Cargar_Citas_Activas();
 		this.getTabla().as(VerticalLayout.class).removeAll();
 		_item.clear();
 		
@@ -111,7 +111,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 		
 		 
 	}
-	void cambiarFecha() {
+	public void cambiarFecha() {
 	
 		Boolean cambiada = false;
 		for (int i=0;i < this._item.size();i++)

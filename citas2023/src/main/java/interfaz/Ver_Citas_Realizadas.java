@@ -8,9 +8,9 @@ import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.Bd_Principal;
 import basededatos.Cita_Realizada;
-import bds.Bd_Principal;
-import bds.iAdministrador;
+import basededatos.iAdministrador;
 import interfaz.Ver_Citas_Realizadas_item;
 
 public class Ver_Citas_Realizadas extends Ver_Citas {

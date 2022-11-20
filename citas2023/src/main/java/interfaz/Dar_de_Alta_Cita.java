@@ -6,9 +6,9 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Asunto;
+import basededatos.Bd_Principal;
 import basededatos.Cliente;
-import bds.Bd_Principal;
-import bds.iAdministrador;
+import basededatos.iAdministrador;
 import vistas.VistaDarDeAlta;
 
 public class Dar_de_Alta_Cita extends VistaDarDeAlta {
@@ -57,7 +57,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 		this.getDatos_cita().as(VerticalLayout.class).add(_poner_Cliente);
 	}
 
-	void Dar_de_Alta() {
+	public void Dar_de_Alta() {
 		if (_poner_Cliente._cliente) {
 			if (_poner_Asunto._asunto) {			
 				adm.Crear_Cita_Asunto_Cliente_Nuevos(_poner_Fecha.getFechaCita().getValue(), _poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
