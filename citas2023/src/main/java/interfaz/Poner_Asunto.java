@@ -35,6 +35,7 @@ public class Poner_Asunto extends VistaPonerAsunto {
 		});		
 	}
 	public void Nuevo_Asunto() {
+		_nuevo_Asunto.getNuevoAsunto().clear();
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Asunto);
 		_asunto = true;
 	}

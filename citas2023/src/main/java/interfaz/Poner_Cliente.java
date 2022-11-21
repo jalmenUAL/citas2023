@@ -31,6 +31,10 @@ public class Poner_Cliente extends VistaPonerCliente {
 		});
 	}
 	public void Nuevo_Cliente() {
+		_nuevo_Cliente.getNuevoCliente().clear();
+		_nuevo_Cliente.getCorreo().clear();
+		_nuevo_Cliente.getTelefono().clear();
+		_nuevo_Cliente.getDireccion().clear();
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Cliente);
 		_cliente = true;
 	}

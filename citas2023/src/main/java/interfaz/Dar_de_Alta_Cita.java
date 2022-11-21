@@ -48,6 +48,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	}
 	
 	public void Poner_Fecha() {
+		_poner_Fecha.getFechaCita().clear();
 		this.getDatos_cita().as(VerticalLayout.class).add(_poner_Fecha);
 	}
 
@@ -120,5 +121,6 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 
 			}
 		}
+		_poner_Fecha.getFechaCita().clear();
 	}
 }

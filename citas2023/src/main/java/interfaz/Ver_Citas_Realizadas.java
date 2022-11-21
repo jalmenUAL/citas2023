@@ -48,6 +48,7 @@ public class Ver_Citas_Realizadas extends Ver_Citas {
 				Ver_Citas_Realizadas_item vci = new Ver_Citas_Realizadas_item(cr.get(i));
 				vci.getCliente().setValue(cr.get(i).getCliente().getNombre());
 				vci.getAsunto().setValue(cr.get(i).getEs_para().getNombre());
+				vci.getCorreo().setValue(cr.get(i).getCliente().getCorreo());
 				vci.getDia().setValue(Integer.toString(cr.get(i).getFecha().getDia()));
 				vci.getMes().setValue(Integer.toString(cr.get(i).getFecha().getMes()));
 				vci.getAno().setValue(Integer.toString(cr.get(i).getFecha().getAnyo()));

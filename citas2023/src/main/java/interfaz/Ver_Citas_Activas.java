@@ -105,6 +105,7 @@ public class Ver_Citas_Activas extends Ver_Citas {
 			vci.getDia().setValue(Integer.toString(ca.get(i).getFecha().getDia()));
 			vci.getMes().setValue(Integer.toString(ca.get(i).getFecha().getMes()));
 			vci.getAno().setValue(Integer.toString(ca.get(i).getFecha().getAnyo()));
+			vci.getCorreo().setValue(ca.get(i).getCliente().getCorreo());
 			this.getTabla().as(VerticalLayout.class).add(vci);
 			_item.add(vci);
 		}
