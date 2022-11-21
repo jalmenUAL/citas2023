@@ -14,12 +14,12 @@ import vistas.VistaPonerCliente;
 public class Poner_Cliente extends VistaPonerCliente {
 	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
 	public Nuevo_Cliente _nuevo_Cliente = new Nuevo_Cliente();
-	
+
 	Boolean _cliente = false;
 	iAdministrador adm = new Bd_Principal();
 	List<Cliente> cl = adm.Cargar_Clientes();
 
-	public Poner_Cliente() { 
+	public Poner_Cliente() {
 		this.getSeleccionCliente().setItems(cl);
 		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 		this.getBotonNuevoCliente().addClickListener(new ComponentEventListener() {
@@ -30,6 +30,7 @@ public class Poner_Cliente extends VistaPonerCliente {
 			}
 		});
 	}
+
 	public void Nuevo_Cliente() {
 		_nuevo_Cliente.getNuevoCliente().clear();
 		_nuevo_Cliente.getCorreo().clear();
@@ -39,7 +40,4 @@ public class Poner_Cliente extends VistaPonerCliente {
 		_cliente = true;
 	}
 
-	 
-
-	 
 }

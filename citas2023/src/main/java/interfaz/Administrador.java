@@ -11,12 +11,12 @@ public class Administrador extends Logeado {
 	public Gestionar_Citas _gestionar_Citas = new Gestionar_Citas();
 
 	public Administrador() {
-		 
-		 Gestionar_Citas();
-	 }
-	 
-	 public void Gestionar_Citas() {
-		 
-		 this.getConenido().as(VerticalLayout.class).add(_gestionar_Citas);
-		}
+
+		Gestionar_Citas();
+	}
+
+	public void Gestionar_Citas() {
+
+		this.getConenido().as(VerticalLayout.class).add(_gestionar_Citas);
+	}
 }

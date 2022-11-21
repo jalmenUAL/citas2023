@@ -5,11 +5,10 @@ import com.vaadin.flow.router.Route;
 
 import basededatos.iUsuario;
 
-
 public class Usuario extends Logeado {
-	/*public iUsuario _iUsuario;*/
+	/* public iUsuario _iUsuario; */
 	public Ver_Citas_Activas _ver_Citas_Activas = new Ver_Citas_Activas();
-	
+
 	public Usuario() {
 		Ver_Citas_Activas();
 	}
@@ -17,6 +16,5 @@ public class Usuario extends Logeado {
 	public void Ver_Citas_Activas() {
 		this.getConenido().as(VerticalLayout.class).add(_ver_Citas_Activas);
 	}
-	
-	 
+
 }

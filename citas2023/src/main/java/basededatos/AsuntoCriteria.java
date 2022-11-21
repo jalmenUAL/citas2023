@@ -22,33 +22,32 @@ public class AsuntoCriteria extends AbstractORMCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nombre;
 	public final CollectionExpression de_la_cita;
-	
+
 	public AsuntoCriteria(Criteria criteria) {
 		super(criteria);
 		ID = new IntegerExpression("ID", this);
 		nombre = new StringExpression("nombre", this);
 		de_la_cita = new CollectionExpression("ORM_de_la_cita", this);
 	}
-	
+
 	public AsuntoCriteria(PersistentSession session) {
 		this(session.createCriteria(Asunto.class));
 	}
-	
+
 	public AsuntoCriteria() throws PersistentException {
 		this(GestiondeCitasPersistentManager.instance().getSession());
 	}
-	
+
 	public CitaCriteria createDe_la_citaCriteria() {
 		return new CitaCriteria(createCriteria("ORM_de_la_cita"));
 	}
-	
+
 	public Asunto uniqueAsunto() {
 		return (Asunto) super.uniqueResult();
 	}
-	
+
 	public Asunto[] listAsunto() {
 		java.util.List list = super.list();
 		return (Asunto[]) list.toArray(new Asunto[list.size()]);
 	}
 }
-
