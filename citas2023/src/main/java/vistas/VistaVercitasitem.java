@@ -10,7 +10,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
- 
+  
 /**
  * A Designer generated component for the vista-vercitasitem template.
  *
@@ -40,6 +40,8 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 	private Button verInformacion;
 	@Id("seleccionar")
 	private Checkbox seleccionar;
+	@Id("Correo")
+	private TextField correo;
 
 	/**
      * Creates a new VistaVercitasitem.
@@ -127,5 +129,13 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 
 	public void setSeleccionar(Checkbox seleccionar) {
 		this.seleccionar = seleccionar;
+	}
+
+	public TextField getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(TextField correo) {
+		this.correo = correo;
 	}
 }

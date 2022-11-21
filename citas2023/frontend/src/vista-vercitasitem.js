@@ -24,6 +24,7 @@ class VistaVercitasitem extends PolymerElement {
   <vaadin-text-field label="Mes" placeholder="Placeholder" style="flex-grow: 1;" id="mes"></vaadin-text-field>
   <vaadin-text-field label="Año" placeholder="Placeholder" style="flex-grow: 1;" id="ano"></vaadin-text-field>
   <vaadin-text-field label="Asunto" placeholder="Placeholder" style="flex-grow: 1;" id="asunto"></vaadin-text-field>
+  <vaadin-text-field label="Correo" placeholder="Placeholder" id="Correo"></vaadin-text-field>
   <vaadin-button id="VerInformacion" style="align-self: center;">
     Ver Informacion del Cliente 
   </vaadin-button>

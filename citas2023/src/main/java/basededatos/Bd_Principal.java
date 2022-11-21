@@ -51,10 +51,10 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 		}
 	}
 
-	public void Crear_Cita_Nuevo_Cliente(LocalDate fecha, String Nombre, String Direccion, String Telefono, int Asunto) {
+	public void Crear_Cita_Nuevo_Cliente(LocalDate fecha, String Nombre, String Direccion, String Telefono, int Asunto, String Correo) {
 
 		try {
-			int Id_cliente = clientes.Nuevo_Cliente(Nombre, Direccion, Telefono);
+			int Id_cliente = clientes.Nuevo_Cliente(Nombre, Direccion, Telefono, Correo);
 			citas.Crear_Cita(fecha, Id_cliente, Asunto);
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block
@@ -63,11 +63,11 @@ public class Bd_Principal implements iAdministrador, iUsuario, iNo_Logeado, iLog
 	}
 
 	public void Crear_Cita_Asunto_Cliente_Nuevos(LocalDate fecha, String Asunto, String Nombre, String Direccion,
-			String Telefono) {
+			String Telefono, String Correo) {
 		int Id_asunto;
 		try {
 			Id_asunto = asuntos.Crear_Asunto(Asunto);
-			int Id_cliente = clientes.Nuevo_Cliente(Nombre, Direccion, Telefono);
+			int Id_cliente = clientes.Nuevo_Cliente(Nombre, Direccion, Telefono, Correo);
 			citas.Crear_Cita(fecha, Id_cliente, Id_asunto);
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block

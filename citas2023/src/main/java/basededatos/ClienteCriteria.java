@@ -23,6 +23,7 @@ public class ClienteCriteria extends AbstractORMCriteria {
 	public final StringExpression nombre;
 	public final StringExpression direccion;
 	public final StringExpression telefono;
+	public final StringExpression correo;
 	public final CollectionExpression fechas;
 	
 	public ClienteCriteria(Criteria criteria) {
@@ -31,6 +32,7 @@ public class ClienteCriteria extends AbstractORMCriteria {
 		nombre = new StringExpression("nombre", this);
 		direccion = new StringExpression("direccion", this);
 		telefono = new StringExpression("telefono", this);
+		correo = new StringExpression("correo", this);
 		fechas = new CollectionExpression("ORM_fechas", this);
 	}
 	

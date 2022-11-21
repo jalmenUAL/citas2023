@@ -42,6 +42,7 @@ public class Ver_Citas_item extends VistaVercitasitem {
 		_ver_Informacion_Cliente.getNombre().setValue(cita.getCliente().getNombre());
 		_ver_Informacion_Cliente.getDireccion().setValue(cita.getCliente().getDireccion());
 		_ver_Informacion_Cliente.getTelefono().setValue(cita.getCliente().getTelefono());	
+		_ver_Informacion_Cliente.getCorreo().setValue(cita.getCliente().getCorreo());
 	}
 	
 	public void Seleccionar() {	 

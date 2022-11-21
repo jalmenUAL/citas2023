@@ -53,6 +53,9 @@ public class Cliente implements Serializable {
 	@Column(name="Telefono", nullable=true, length=255)	
 	private String telefono;
 	
+	@Column(name="Correo", nullable=true, length=255)	
+	private String correo;
+	
 	@OneToMany(mappedBy="cliente", targetEntity=basededatos.Fecha.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
@@ -92,6 +95,14 @@ public class Cliente implements Serializable {
 	
 	public String getTelefono() {
 		return telefono;
+	}
+	
+	public void setCorreo(String value) {
+		this.correo = value;
+	}
+	
+	public String getCorreo() {
+		return correo;
 	}
 	
 	public basededatos.Cita[] getCitas() {

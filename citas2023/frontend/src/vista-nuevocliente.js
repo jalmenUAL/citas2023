@@ -18,6 +18,7 @@ class VistaNuevocliente extends PolymerElement {
  <vaadin-text-field label="Nombre" placeholder="Introduzca el nombre" id="nuevoNombre" style="align-self: stretch;"></vaadin-text-field>
  <vaadin-text-field label="Dirección" placeholder="Introduzca la dirección" id="Direccion" style="align-self: stretch;"></vaadin-text-field>
  <vaadin-text-field label="Teléfono" placeholder="Introduzca el teléfono" id="Telefono" style="align-self: stretch;"></vaadin-text-field>
+ <vaadin-text-field label="Correo" placeholder="Placeholder" id="Correo" style="align-self: stretch;"></vaadin-text-field>
 </vaadin-vertical-layout>
 `;
     }

@@ -23,6 +23,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression nombre;
 	public final StringExpression direccion;
 	public final StringExpression telefono;
+	public final StringExpression correo;
 	public final CollectionExpression fechas;
 	
 	public ClienteDetachedCriteria() {
@@ -31,6 +32,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		direccion = new StringExpression("direccion", this.getDetachedCriteria());
 		telefono = new StringExpression("telefono", this.getDetachedCriteria());
+		correo = new StringExpression("correo", this.getDetachedCriteria());
 		fechas = new CollectionExpression("ORM_fechas", this.getDetachedCriteria());
 	}
 	
@@ -40,6 +42,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		direccion = new StringExpression("direccion", this.getDetachedCriteria());
 		telefono = new StringExpression("telefono", this.getDetachedCriteria());
+		correo = new StringExpression("correo", this.getDetachedCriteria());
 		fechas = new CollectionExpression("ORM_fechas", this.getDetachedCriteria());
 	}
 	

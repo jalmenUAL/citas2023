@@ -10,7 +10,7 @@ public class Bd_Clientes implements Serializable {
 
 	 
 
-	public int Nuevo_Cliente(String Nombre, String Direccion, String Telefono) throws PersistentException {
+	public int Nuevo_Cliente(String Nombre, String Direccion, String Telefono,String Correo) throws PersistentException {
 		int id_cliente = -1;
 		PersistentTransaction t = GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
 		try {
@@ -19,6 +19,7 @@ public class Bd_Clientes implements Serializable {
 			cl.setNombre(Nombre);
 			cl.setDireccion(Direccion);
 			cl.setTelefono(Telefono);
+			cl.setCorreo(Correo);
 			ClienteDAO.save(cl);
 			id_cliente = cl.getORMID();
 			t.commit();

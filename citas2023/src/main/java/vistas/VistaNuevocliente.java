@@ -7,6 +7,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
+ 
 
 /**
  * A Designer generated component for the vista-nuevocliente template.
@@ -26,6 +27,8 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
 	private TextField direccion;
 	@Id("Telefono")
 	private TextField telefono;
+	@Id("Correo")
+	private TextField correo;
 
 	/**
      * Creates a new VistaNuevocliente.
@@ -71,5 +74,13 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
 
 	public void setTelefono(TextField telefono) {
 		this.telefono = telefono;
+	}
+
+	public TextField getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(TextField correo) {
+		this.correo = correo;
 	}
 }

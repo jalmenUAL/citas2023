@@ -62,7 +62,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 			if (_poner_Asunto._asunto) {			
 				adm.Crear_Cita_Asunto_Cliente_Nuevos(_poner_Fecha.getFechaCita().getValue(), _poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
 						_poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(), _poner_Cliente._nuevo_Cliente.getDireccion().getValue(),
-						_poner_Cliente._nuevo_Cliente.getTelefono().getValue());
+						_poner_Cliente._nuevo_Cliente.getTelefono().getValue(), _poner_Cliente._nuevo_Cliente.getCorreo().getValue());
 				 
 				_poner_Asunto._asunto = false;
 				_poner_Cliente._cliente = false;
@@ -77,7 +77,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 					else {
 				Asunto asunto = _poner_Asunto.getSeleccionAsunto().getValue();
 				adm.Crear_Cita_Nuevo_Cliente(_poner_Fecha.getFechaCita().getValue(), _poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(),
-						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID());		
+						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID(),_poner_Cliente._nuevo_Cliente.getCorreo().getValue());		
 				_poner_Cliente._cliente = false;
 				 _poner_Cliente.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Cliente._nuevo_Cliente);
 				 Enviar_Correo();

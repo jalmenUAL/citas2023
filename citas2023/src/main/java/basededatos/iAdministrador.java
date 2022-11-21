@@ -11,9 +11,9 @@ public interface iAdministrador {
 
 	void Crear_Cita_Nuevo_Asunto(LocalDate fecha, String Asunto, int Cliente);
 
-	void Crear_Cita_Nuevo_Cliente(LocalDate fecha, String Nombre, String Direccion, String Telefono, int Asunto);
+	void Crear_Cita_Nuevo_Cliente(LocalDate fecha, String Nombre, String Direccion, String Telefono, int Asunto, String Correo);
 
-	void Crear_Cita_Asunto_Cliente_Nuevos(LocalDate localDate, String Asunto, String Nombre, String Direccion, String Telefono);
+	void Crear_Cita_Asunto_Cliente_Nuevos(LocalDate localDate, String Asunto, String Nombre, String Direccion, String Telefono, String Correo);
 
 	List Cargar_Citas_Realizadas();
 

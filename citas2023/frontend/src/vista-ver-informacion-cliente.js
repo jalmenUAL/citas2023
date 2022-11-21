@@ -30,6 +30,10 @@ class VistaVerInformacionCliente extends PolymerElement {
    <label slot="label" id="label2">Teléfono </label>
    <vaadin-text-field class="full-width" required id="telefono" has-value></vaadin-text-field>
   </vaadin-form-item>
+  <vaadin-form-item id="vaadinFormItem2" style="width: 100%;">
+   <label slot="label" id="label3">Correo </label>
+   <vaadin-text-field class="full-width" required id="correo" has-value></vaadin-text-field>
+  </vaadin-form-item>
  </vaadin-form-layout>
 </vaadin-form-layout>
 `;
