@@ -1,5 +1,7 @@
 package interfaz;
 
+import java.time.LocalDate;
+
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
@@ -21,8 +23,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 
 	iAdministrador adm = new Bd_Principal();
 
-	public void Enviar_Correo() {
-		_servidor_de_Correo.Enviar_Correo();
+	public void Enviar_Correo(String Correo, LocalDate Date, String Asunto) {
+		_servidor_de_Correo.Enviar_Correo(Correo,Date,Asunto);
 	}
 	
 	public Dar_de_Alta_Cita() {
@@ -68,7 +70,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				_poner_Cliente._cliente = false;
 				_poner_Asunto.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Asunto._nuevo_Asunto);
 				 _poner_Cliente.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Cliente._nuevo_Cliente);
-				 Enviar_Correo();
+				 Enviar_Correo(_poner_Cliente._nuevo_Cliente.getCorreo().getValue(),_poner_Fecha.getFechaCita().getValue(),_poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue());
 
 			} else {	
 				if (_poner_Asunto.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
@@ -80,7 +82,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID(),_poner_Cliente._nuevo_Cliente.getCorreo().getValue());		
 				_poner_Cliente._cliente = false;
 				 _poner_Cliente.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Cliente._nuevo_Cliente);
-				 Enviar_Correo();
+				 Enviar_Correo(_poner_Cliente._nuevo_Cliente.getCorreo().getValue(),_poner_Fecha.getFechaCita().getValue(),_poner_Asunto.getSeleccionAsunto().getValue().getNombre());
+
 				}
 				}
 			}
@@ -96,7 +99,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 						cliente.getORMID());
 				_poner_Asunto._asunto = false;
 				_poner_Asunto.getVaadinVerticalLayout().as(VerticalLayout.class).remove(_poner_Asunto._nuevo_Asunto);
-				Enviar_Correo();
+				 Enviar_Correo(_poner_Cliente._nuevo_Cliente.getCorreo().getValue(),_poner_Fecha.getFechaCita().getValue(),_poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue());
+
 				}
 					}
 			} 
@@ -110,7 +114,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				Asunto asunto = _poner_Asunto.getSeleccionAsunto().getValue();
 				Cliente cliente = _poner_Cliente.getSeleccionCliente().getValue();
 				adm.Crear_Cita(_poner_Fecha.getFechaCita().getValue(), cliente.getORMID(), asunto.getORMID());
-				Enviar_Correo();
+				 Enviar_Correo(_poner_Cliente._nuevo_Cliente.getCorreo().getValue(),_poner_Fecha.getFechaCita().getValue(),_poner_Asunto.getSeleccionAsunto().getValue().getNombre());
+ 
 					}
 
 			}
