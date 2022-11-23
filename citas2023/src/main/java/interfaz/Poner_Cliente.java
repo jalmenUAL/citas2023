@@ -20,6 +20,7 @@ public class Poner_Cliente extends VistaPonerCliente {
 	List<Cliente> cl = adm.Cargar_Clientes();
 
 	public Poner_Cliente() {
+		this.getSeleccionCliente().setVisible(true);
 		this.getSeleccionCliente().setItems(cl);
 		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 		this.getBotonNuevoCliente().addClickListener(new ComponentEventListener() {
@@ -32,6 +33,7 @@ public class Poner_Cliente extends VistaPonerCliente {
 	}
 
 	public void Nuevo_Cliente() {
+		this.getSeleccionCliente().setVisible(false);
 		_nuevo_Cliente.getNuevoCliente().clear();
 		_nuevo_Cliente.getCorreo().clear();
 		_nuevo_Cliente.getTelefono().clear();

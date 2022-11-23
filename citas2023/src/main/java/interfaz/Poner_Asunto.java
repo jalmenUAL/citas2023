@@ -21,7 +21,7 @@ public class Poner_Asunto extends VistaPonerAsunto {
 	List<Asunto> as = adm.Cargar_Asuntos();
 
 	public Poner_Asunto() {
-
+		this.getSeleccionAsunto().setVisible(true);
 		this.getSeleccionAsunto().setItems(as);
 		this.getSeleccionAsunto().setItemLabelGenerator(Asunto::getNombre);
 		this.getBotonNuevoAsunto().addClickListener(new ComponentEventListener() {
@@ -35,6 +35,7 @@ public class Poner_Asunto extends VistaPonerAsunto {
 
 	public void Nuevo_Asunto() {
 		_nuevo_Asunto.getNuevoAsunto().clear();
+		this.getSeleccionAsunto().setVisible(false);
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Asunto);
 		_asunto = true;
 	}
