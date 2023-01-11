@@ -22,6 +22,7 @@ import interfaz.Usuario;
  
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.vaadin.vcamera.VCamera;
 
 /**
  * A sample Vaadin view class.
@@ -55,6 +56,8 @@ public class MainView extends VerticalLayout {
      *
      * @param service The message service. Automatically injected Spring managed bean.
      */
+	
+	 
 	
 	 
 	
@@ -118,6 +121,6 @@ public class MainView extends VerticalLayout {
         
         
     	 	
-    }
+    } 
 
 }
